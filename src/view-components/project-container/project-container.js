@@ -1,10 +1,13 @@
 import './project-container.css';
 
 export default class ProjectContainer {
+    constructor() {
+        this.projectContainer = document.createElement('div');
+    }
+
     load() {
         const body = document.querySelector('body');
-        const container = document.createElement('div')
-        container.classList.add('container');
-        body.appendChild(container);
+        this.projectContainer.classList.add('project-container');
+        body.appendChild(this.projectContainer);
     };
 };

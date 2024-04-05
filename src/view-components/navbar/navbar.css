@@ -1,0 +1,14 @@
+.navbar-container {
+    display: flex;
+    height: 5em;
+}
+
+.navbar-icon {
+    width: auto;
+    height: 100%;
+}
+
+.navbar-header {
+    font-weight: bolder;
+    font-size: 5em;
+}

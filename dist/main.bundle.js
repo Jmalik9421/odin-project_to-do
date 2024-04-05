@@ -237,7 +237,20 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.navbar-container {
+    display: flex;
+    height: 5em;
+}
+
+.navbar-icon {
+    width: auto;
+    height: 100%;
+}
+
+.navbar-header {
+    font-weight: bolder;
+    font-size: 5em;
+}`, "",{"version":3,"sources":["webpack://./src/view-components/navbar/navbar.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,WAAW;AACf;;AAEA;IACI,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,mBAAmB;IACnB,cAAc;AAClB","sourcesContent":[".navbar-container {\n    display: flex;\n    height: 5em;\n}\n\n.navbar-icon {\n    width: auto;\n    height: 100%;\n}\n\n.navbar-header {\n    font-weight: bolder;\n    font-size: 5em;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -263,11 +276,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.container {
+___CSS_LOADER_EXPORT___.push([module.id, `.project-container {
     width: 100%;
     height: 100%;
     background-color: aquamarine;
-}`, "",{"version":3,"sources":["webpack://./src/view-components/project-container/project-container.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC","sourcesContent":[".container {\n    width: 100%;\n    height: 100%;\n    background-color: aquamarine;\n}"],"sourceRoot":""}]);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}`, "",{"version":3,"sources":["webpack://./src/view-components/project-container/project-container.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,4BAA4B;IAC5B,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;IACnB,kBAAkB;AACtB","sourcesContent":[".project-container {\n    width: 100%;\n    height: 100%;\n    background-color: aquamarine;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1358,11 +1376,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Navbar)
 /* harmony export */ });
 /* harmony import */ var _navbar_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navbar.css */ "./src/view-components/navbar/navbar.css");
+/* harmony import */ var _to_do_list_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./to-do-list.png */ "./src/view-components/navbar/to-do-list.png");
+
 
 
 class Navbar {
-    load() {
-        console.log('navbar loaded');
+    constructor() {
+        this.projectContainer = document.querySelector('.project-container');
+        this.navbarContainer = document.createElement('div');
+        this.header = document.createElement('h1');
+        this.icon = new Image();
+    }
+
+    async load() {
+        this.loadNavbarContainer();
+        this.loadIcon();
+        this.loadHeader();
+    };
+
+    loadNavbarContainer() {
+        this.navbarContainer.classList.add('navbar-container');
+        this.projectContainer.appendChild(this.navbarContainer);
+    };
+
+    loadIcon() {
+        this.icon.src = _to_do_list_png__WEBPACK_IMPORTED_MODULE_1__;
+        this.icon.classList.add('navbar-icon');
+        this.navbarContainer.appendChild(this.icon);
+    };
+
+    loadHeader() {
+        this.header.textContent = 'To-do list'
+        this.header.classList.add('navbar-header');
+        this.navbarContainer.appendChild(this.header);
     };
 };
 
@@ -1382,14 +1428,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class ProjectContainer {
+    constructor() {
+        this.projectContainer = document.createElement('div');
+    }
+
     load() {
         const body = document.querySelector('body');
-        const container = document.createElement('div')
-        container.classList.add('container');
-        body.appendChild(container);
+        this.projectContainer.classList.add('project-container');
+        body.appendChild(this.projectContainer);
     };
 };
 
+
+/***/ }),
+
+/***/ "./src/view-components/navbar/to-do-list.png":
+/*!***************************************************!*\
+  !*** ./src/view-components/navbar/to-do-list.png ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ed7b1c334a2d2a8073db.png";
 
 /***/ })
 
@@ -1444,6 +1503,18 @@ class ProjectContainer {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -1458,6 +1529,29 @@ class ProjectContainer {
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
@@ -1495,23 +1589,30 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const projectContainer = new _view_components_project_container_project_container_js__WEBPACK_IMPORTED_MODULE_1__["default"];
-const navbar = new _view_components_navbar_navbar_js__WEBPACK_IMPORTED_MODULE_2__["default"];
-const addProject = new _view_components_add_project_add_project_js__WEBPACK_IMPORTED_MODULE_3__["default"];
-const listOfToDoProjects = new _view_components_list_of_to_do_projects_list_of_to_do_projects_js__WEBPACK_IMPORTED_MODULE_4__["default"];
-const addTask = new _view_components_list_of_to_do_projects_modal_list_of_tasks_add_task_add_task_js__WEBPACK_IMPORTED_MODULE_5__["default"];
-const listOfToDoTasks = new _view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_to_do_tasks_list_of_to_do_tasks_js__WEBPACK_IMPORTED_MODULE_6__["default"];
-const listOfCompletedTasks = new _view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_completed_tasks_list_of_completed_tasks_js__WEBPACK_IMPORTED_MODULE_7__["default"];
-const listofCompletedProjects = new _view_components_list_of_completed_projects_list_of_completed_projects_js__WEBPACK_IMPORTED_MODULE_8__["default"];
-const footer = new _view_components_footer_footer_js__WEBPACK_IMPORTED_MODULE_9__["default"];
-
 projectContainer.load();
+
+const navbar = new _view_components_navbar_navbar_js__WEBPACK_IMPORTED_MODULE_2__["default"];
 navbar.load();
+
+const addProject = new _view_components_add_project_add_project_js__WEBPACK_IMPORTED_MODULE_3__["default"];
 addProject.load();
+
+const listOfToDoProjects = new _view_components_list_of_to_do_projects_list_of_to_do_projects_js__WEBPACK_IMPORTED_MODULE_4__["default"];
 listOfToDoProjects.load();
+
+const addTask = new _view_components_list_of_to_do_projects_modal_list_of_tasks_add_task_add_task_js__WEBPACK_IMPORTED_MODULE_5__["default"];
 addTask.load();
+
+const listOfToDoTasks = new _view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_to_do_tasks_list_of_to_do_tasks_js__WEBPACK_IMPORTED_MODULE_6__["default"];
 listOfToDoTasks.load();
+
+const listOfCompletedTasks = new _view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_completed_tasks_list_of_completed_tasks_js__WEBPACK_IMPORTED_MODULE_7__["default"];
 listOfCompletedTasks.load();
+
+const listofCompletedProjects = new _view_components_list_of_completed_projects_list_of_completed_projects_js__WEBPACK_IMPORTED_MODULE_8__["default"];
 listofCompletedProjects.load();
+
+const footer = new _view_components_footer_footer_js__WEBPACK_IMPORTED_MODULE_9__["default"];
 footer.load();
 
 })();

@@ -10,21 +10,28 @@ import ListofCompletedProjects from './view-components/list-of-completed-project
 import Footer from './view-components/footer/footer.js'
 
 const projectContainer = new ProjectContainer;
-const navbar = new Navbar;
-const addProject = new AddProject;
-const listOfToDoProjects = new ListOfToDoProjects;
-const addTask = new AddTask;
-const listOfToDoTasks = new ListOfToDoTasks;
-const listOfCompletedTasks = new ListOfCompletedTasks;
-const listofCompletedProjects = new ListofCompletedProjects;
-const footer = new Footer;
-
 projectContainer.load();
+
+const navbar = new Navbar;
 navbar.load();
+
+const addProject = new AddProject;
 addProject.load();
+
+const listOfToDoProjects = new ListOfToDoProjects;
 listOfToDoProjects.load();
+
+const addTask = new AddTask;
 addTask.load();
+
+const listOfToDoTasks = new ListOfToDoTasks;
 listOfToDoTasks.load();
+
+const listOfCompletedTasks = new ListOfCompletedTasks;
 listOfCompletedTasks.load();
+
+const listofCompletedProjects = new ListofCompletedProjects;
 listofCompletedProjects.load();
+
+const footer = new Footer;
 footer.load();
