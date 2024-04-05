@@ -1,5 +1,7 @@
 import './add-project.css';
 
-export default function addProject() {
-    console.log('addProject loaded');
+export default class AddProject {
+    load() {
+        console.log('addProject loaded');
+    };
 };

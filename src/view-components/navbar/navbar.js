@@ -1,5 +1,7 @@
 import './navbar.css';
 
-export default function navbar() {
-    console.log('navbar loaded');
+export default class Navbar {
+    load() {
+        console.log('navbar loaded');
+    };
 };

@@ -1,5 +1,10 @@
 import './project-container.css';
 
-export default function projectContainer() {
-    console.log('projectContainer loaded');
+export default class ProjectContainer {
+    load() {
+        const body = document.querySelector('body');
+        const container = document.createElement('div')
+        container.classList.add('container');
+        body.appendChild(container);
+    };
 };

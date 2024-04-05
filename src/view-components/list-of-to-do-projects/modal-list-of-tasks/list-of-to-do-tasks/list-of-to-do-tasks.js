@@ -1,5 +1,7 @@
 import './list-of-to-do-tasks.css';
 
-export default function listOfToDoTasks() {
-    console.log('listOfToDoTasks loaded');
+export default class ListOfToDoTasks {
+    load() {
+        console.log('listOfToDoTasks loaded');
+    };
 };

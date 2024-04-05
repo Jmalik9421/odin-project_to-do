@@ -2,6 +2,40 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
+/*!*************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
+  \*************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,SAAS;IACT,UAAU;IACV,sBAAsB;AAC1B;;AAEA;IACI,YAAY;AAChB","sourcesContent":["* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nhtml, body {\n    height: 100%;\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/view-components/add-project/add-project.css":
 /*!***********************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/view-components/add-project/add-project.css ***!
@@ -229,7 +263,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.container {
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+}`, "",{"version":3,"sources":["webpack://./src/view-components/project-container/project-container.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,4BAA4B;AAChC","sourcesContent":[".container {\n    width: 100%;\n    height: 100%;\n    background-color: aquamarine;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -352,6 +390,60 @@ module.exports = function (item) {
   }
   return [content].join("\n");
 };
+
+/***/ }),
+
+/***/ "./src/style.css":
+/*!***********************!*\
+  !*** ./src/style.css ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../node_modules/css-loader/dist/cjs.js!./style.css */ "./node_modules/css-loader/dist/cjs.js!./src/style.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
 
 /***/ }),
 
@@ -1116,13 +1208,15 @@ module.exports = styleTagTransform;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ addProject)
+/* harmony export */   "default": () => (/* binding */ AddProject)
 /* harmony export */ });
 /* harmony import */ var _add_project_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./add-project.css */ "./src/view-components/add-project/add-project.css");
 
 
-function addProject() {
-    console.log('addProject loaded');
+class AddProject {
+    load() {
+        console.log('addProject loaded');
+    };
 };
 
 /***/ }),
@@ -1135,13 +1229,15 @@ function addProject() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ footer)
+/* harmony export */   "default": () => (/* binding */ Footer)
 /* harmony export */ });
 /* harmony import */ var _footer_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.css */ "./src/view-components/footer/footer.css");
 
 
-function footer() {
-    console.log('footer loaded');
+class Footer {
+    load() {
+        console.log('footer loaded');
+    };
 };
 
 /***/ }),
@@ -1154,13 +1250,15 @@ function footer() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ listOfCompletedProjects)
+/* harmony export */   "default": () => (/* binding */ ListOfCompletedProjects)
 /* harmony export */ });
 /* harmony import */ var _list_of_completed_projects_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./list-of-completed-projects.css */ "./src/view-components/list-of-completed-projects/list-of-completed-projects.css");
 
 
-function listOfCompletedProjects() {
-    console.log('listOfCompletedProjects loaded');
+class ListOfCompletedProjects {
+    load() {
+        console.log('listOfCompletedProjects loaded');
+    };
 };
 
 /***/ }),
@@ -1173,13 +1271,15 @@ function listOfCompletedProjects() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ listOfToDoProjects)
+/* harmony export */   "default": () => (/* binding */ ListOfToDoProjects)
 /* harmony export */ });
 /* harmony import */ var _list_of_to_do_projects_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./list-of-to-do-projects.css */ "./src/view-components/list-of-to-do-projects/list-of-to-do-projects.css");
 
 
-function listOfToDoProjects() {
-    console.log('listOfToDoProjects loaded');
+class ListOfToDoProjects {
+    load() {
+        console.log('listOfToDoProjects loaded');
+    };
 };
 
 /***/ }),
@@ -1192,13 +1292,15 @@ function listOfToDoProjects() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ addTask)
+/* harmony export */   "default": () => (/* binding */ AddTask)
 /* harmony export */ });
 /* harmony import */ var _add_task_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./add-task.css */ "./src/view-components/list-of-to-do-projects/modal-list-of-tasks/add-task/add-task.css");
 
 
-function addTask() {
-    console.log('addTask loaded');
+class AddTask {
+    load() {
+        console.log('addTask loaded');
+    };
 };
 
 /***/ }),
@@ -1211,13 +1313,15 @@ function addTask() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ listOfCompletedTasks)
+/* harmony export */   "default": () => (/* binding */ ListOfCompletedTasks)
 /* harmony export */ });
 /* harmony import */ var _list_of_completed_tasks_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./list-of-completed-tasks.css */ "./src/view-components/list-of-to-do-projects/modal-list-of-tasks/list-of-completed-tasks/list-of-completed-tasks.css");
 
 
-function listOfCompletedTasks() {
-    console.log('listOfCompletedTasks loaded');
+class ListOfCompletedTasks {
+    load() {
+        console.log('listOfCompletedTasks loaded');
+    };
 };
 
 /***/ }),
@@ -1230,13 +1334,15 @@ function listOfCompletedTasks() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ listOfToDoTasks)
+/* harmony export */   "default": () => (/* binding */ ListOfToDoTasks)
 /* harmony export */ });
 /* harmony import */ var _list_of_to_do_tasks_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./list-of-to-do-tasks.css */ "./src/view-components/list-of-to-do-projects/modal-list-of-tasks/list-of-to-do-tasks/list-of-to-do-tasks.css");
 
 
-function listOfToDoTasks() {
-    console.log('listOfToDoTasks loaded');
+class ListOfToDoTasks {
+    load() {
+        console.log('listOfToDoTasks loaded');
+    };
 };
 
 /***/ }),
@@ -1249,13 +1355,15 @@ function listOfToDoTasks() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ navbar)
+/* harmony export */   "default": () => (/* binding */ Navbar)
 /* harmony export */ });
 /* harmony import */ var _navbar_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navbar.css */ "./src/view-components/navbar/navbar.css");
 
 
-function navbar() {
-    console.log('navbar loaded');
+class Navbar {
+    load() {
+        console.log('navbar loaded');
+    };
 };
 
 /***/ }),
@@ -1268,14 +1376,20 @@ function navbar() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ projectContainer)
+/* harmony export */   "default": () => (/* binding */ ProjectContainer)
 /* harmony export */ });
 /* harmony import */ var _project_container_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project-container.css */ "./src/view-components/project-container/project-container.css");
 
 
-function projectContainer() {
-    console.log('projectContainer loaded');
+class ProjectContainer {
+    load() {
+        const body = document.querySelector('body');
+        const container = document.createElement('div')
+        container.classList.add('container');
+        body.appendChild(container);
+    };
 };
+
 
 /***/ })
 
@@ -1359,15 +1473,16 @@ var __webpack_exports__ = {};
   !*** ./src/main.js ***!
   \*********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _view_components_project_container_project_container_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./view-components/project-container/project-container.js */ "./src/view-components/project-container/project-container.js");
-/* harmony import */ var _view_components_navbar_navbar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./view-components/navbar/navbar.js */ "./src/view-components/navbar/navbar.js");
-/* harmony import */ var _view_components_add_project_add_project_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view-components/add-project/add-project.js */ "./src/view-components/add-project/add-project.js");
-/* harmony import */ var _view_components_list_of_to_do_projects_list_of_to_do_projects_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./view-components/list-of-to-do-projects/list-of-to-do-projects.js */ "./src/view-components/list-of-to-do-projects/list-of-to-do-projects.js");
-/* harmony import */ var _view_components_list_of_to_do_projects_modal_list_of_tasks_add_task_add_task_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./view-components/list-of-to-do-projects/modal-list-of-tasks/add-task/add-task.js */ "./src/view-components/list-of-to-do-projects/modal-list-of-tasks/add-task/add-task.js");
-/* harmony import */ var _view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_to_do_tasks_list_of_to_do_tasks_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./view-components/list-of-to-do-projects/modal-list-of-tasks/list-of-to-do-tasks/list-of-to-do-tasks.js */ "./src/view-components/list-of-to-do-projects/modal-list-of-tasks/list-of-to-do-tasks/list-of-to-do-tasks.js");
-/* harmony import */ var _view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_completed_tasks_list_of_completed_tasks_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./view-components/list-of-to-do-projects/modal-list-of-tasks/list-of-completed-tasks/list-of-completed-tasks.js */ "./src/view-components/list-of-to-do-projects/modal-list-of-tasks/list-of-completed-tasks/list-of-completed-tasks.js");
-/* harmony import */ var _view_components_list_of_completed_projects_list_of_completed_projects_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./view-components/list-of-completed-projects/list-of-completed-projects.js */ "./src/view-components/list-of-completed-projects/list-of-completed-projects.js");
-/* harmony import */ var _view_components_footer_footer_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./view-components/footer/footer.js */ "./src/view-components/footer/footer.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* harmony import */ var _view_components_project_container_project_container_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./view-components/project-container/project-container.js */ "./src/view-components/project-container/project-container.js");
+/* harmony import */ var _view_components_navbar_navbar_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./view-components/navbar/navbar.js */ "./src/view-components/navbar/navbar.js");
+/* harmony import */ var _view_components_add_project_add_project_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./view-components/add-project/add-project.js */ "./src/view-components/add-project/add-project.js");
+/* harmony import */ var _view_components_list_of_to_do_projects_list_of_to_do_projects_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./view-components/list-of-to-do-projects/list-of-to-do-projects.js */ "./src/view-components/list-of-to-do-projects/list-of-to-do-projects.js");
+/* harmony import */ var _view_components_list_of_to_do_projects_modal_list_of_tasks_add_task_add_task_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./view-components/list-of-to-do-projects/modal-list-of-tasks/add-task/add-task.js */ "./src/view-components/list-of-to-do-projects/modal-list-of-tasks/add-task/add-task.js");
+/* harmony import */ var _view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_to_do_tasks_list_of_to_do_tasks_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./view-components/list-of-to-do-projects/modal-list-of-tasks/list-of-to-do-tasks/list-of-to-do-tasks.js */ "./src/view-components/list-of-to-do-projects/modal-list-of-tasks/list-of-to-do-tasks/list-of-to-do-tasks.js");
+/* harmony import */ var _view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_completed_tasks_list_of_completed_tasks_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./view-components/list-of-to-do-projects/modal-list-of-tasks/list-of-completed-tasks/list-of-completed-tasks.js */ "./src/view-components/list-of-to-do-projects/modal-list-of-tasks/list-of-completed-tasks/list-of-completed-tasks.js");
+/* harmony import */ var _view_components_list_of_completed_projects_list_of_completed_projects_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./view-components/list-of-completed-projects/list-of-completed-projects.js */ "./src/view-components/list-of-completed-projects/list-of-completed-projects.js");
+/* harmony import */ var _view_components_footer_footer_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./view-components/footer/footer.js */ "./src/view-components/footer/footer.js");
 
 
 
@@ -1378,15 +1493,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_view_components_project_container_project_container_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
-(0,_view_components_navbar_navbar_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
-(0,_view_components_add_project_add_project_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
-(0,_view_components_list_of_to_do_projects_list_of_to_do_projects_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
-(0,_view_components_list_of_to_do_projects_modal_list_of_tasks_add_task_add_task_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
-(0,_view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_to_do_tasks_list_of_to_do_tasks_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
-(0,_view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_completed_tasks_list_of_completed_tasks_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
-(0,_view_components_list_of_completed_projects_list_of_completed_projects_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
-(0,_view_components_footer_footer_js__WEBPACK_IMPORTED_MODULE_8__["default"])();
+
+const projectContainer = new _view_components_project_container_project_container_js__WEBPACK_IMPORTED_MODULE_1__["default"];
+const navbar = new _view_components_navbar_navbar_js__WEBPACK_IMPORTED_MODULE_2__["default"];
+const addProject = new _view_components_add_project_add_project_js__WEBPACK_IMPORTED_MODULE_3__["default"];
+const listOfToDoProjects = new _view_components_list_of_to_do_projects_list_of_to_do_projects_js__WEBPACK_IMPORTED_MODULE_4__["default"];
+const addTask = new _view_components_list_of_to_do_projects_modal_list_of_tasks_add_task_add_task_js__WEBPACK_IMPORTED_MODULE_5__["default"];
+const listOfToDoTasks = new _view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_to_do_tasks_list_of_to_do_tasks_js__WEBPACK_IMPORTED_MODULE_6__["default"];
+const listOfCompletedTasks = new _view_components_list_of_to_do_projects_modal_list_of_tasks_list_of_completed_tasks_list_of_completed_tasks_js__WEBPACK_IMPORTED_MODULE_7__["default"];
+const listofCompletedProjects = new _view_components_list_of_completed_projects_list_of_completed_projects_js__WEBPACK_IMPORTED_MODULE_8__["default"];
+const footer = new _view_components_footer_footer_js__WEBPACK_IMPORTED_MODULE_9__["default"];
+
+projectContainer.load();
+navbar.load();
+addProject.load();
+listOfToDoProjects.load();
+addTask.load();
+listOfToDoTasks.load();
+listOfCompletedTasks.load();
+listofCompletedProjects.load();
+footer.load();
 
 })();
 

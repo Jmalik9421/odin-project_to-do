@@ -1,5 +1,7 @@
 import './list-of-completed-tasks.css';
 
-export default function listOfCompletedTasks() {
-    console.log('listOfCompletedTasks loaded');
+export default class ListOfCompletedTasks {
+    load() {
+        console.log('listOfCompletedTasks loaded');
+    };
 };
