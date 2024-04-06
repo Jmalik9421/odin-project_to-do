@@ -1,5 +1,26 @@
 .add-project-container {
     display: flex;
+    flex-direction: column;
+}
+
+.add-project-header {
+    position: relative;
+    font-size: 2.75em;
+    margin-bottom: 0.5em;
+}
+
+.add-project-header:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    width: 33.3%;
+    border: 0.1em solid black;
+    border-radius: 10em;
+}
+
+.add-field-container {
+    display: flex;
     width: 100%;
     height: 5em;
     justify-content: center;

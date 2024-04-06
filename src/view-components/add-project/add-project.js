@@ -4,6 +4,8 @@ export default class AddProject {
     constructor() {
         this.projectContainer = document.querySelector('.project-container');
         this.container = document.createElement('div');
+        this.header = document.createElement('h1');
+        this.fieldContainer = document.createElement('div');
         this.checkboxContainer = document.createElement('label');
         this.checkboxInput = document.createElement('input');
         this.checkbox = document.createElement('span');
@@ -13,6 +15,8 @@ export default class AddProject {
 
     load() {
         this.loadContainer();
+        this.loadHeader();
+        this.loadFieldContainer();
         this.loadCheckbox();
         this.loadForm();
         // this.loadDueDate();
@@ -22,30 +26,41 @@ export default class AddProject {
         this.container.classList.add('add-project-container');
         this.projectContainer.appendChild(this.container);
     }
+    
+    loadHeader() {
+        this.header.classList.add('add-project-header');
+        this.header.textContent = 'Add project';
+        this.container.appendChild(this.header);
+    };
+
+    loadFieldContainer() {
+        this.fieldContainer.classList.add('add-field-container');
+        this.container.appendChild(this.fieldContainer);
+    };
 
     loadForm() {
         this.form.classList.add('add-project-form');
         this.loadTextInput();
-        this.container.appendChild(this.form);
-    }
+        this.fieldContainer.appendChild(this.form);
+    };
 
     loadTextInput() {
         this.textInput.type = 'text';
         this.textInput.id = 'add-project-text-input';
         this.textInput.placeholder = 'Groceries...'
         this.form.appendChild(this.textInput);
-    }
+    };
 
     loadCheckbox() {
         this.loadCheckboxContainer();
         this.loadCheckboxInput();
 
-    }
+    };
 
     loadCheckboxContainer() {
         this.checkboxContainer.classList.add('checkbox-container');
-        this.container.appendChild(this.checkboxContainer);
-    }
+        this.fieldContainer.appendChild(this.checkboxContainer);
+    };
 
     loadCheckboxInput() {
         this.checkboxInput.type = 'checkbox';
