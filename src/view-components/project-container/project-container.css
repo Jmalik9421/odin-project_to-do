@@ -4,7 +4,8 @@
     background-color: aquamarine;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: relative;
+    padding: 5% 5%;
 }

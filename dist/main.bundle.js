@@ -55,7 +55,88 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.add-project-container {
+    display: flex;
+    width: 100%;
+    height: 5em;
+    justify-content: center;
+}
+
+.add-project-form {
+    height: 100%;
+    width: 100%;
+}
+
+#add-project-text-input {
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    font-weight: bolder;
+    padding: 0 1em;
+}
+
+.checkbox-container {
+    position:relative;
+    display: block;
+    height: 100%;
+    width: 5em;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+/* hide browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* create custom checkbox */
+.checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0.4em 0.2em;
+}
+
+.checkbox-container:hover input ~ .checkbox {
+    background-color: #cccccc;
+}
+
+.checkbox-container input:checked ~ .checkbox {
+    background-color: #2196f3;
+}
+
+/* create checkmark (hidden when not checked) */
+.checkbox:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+/* show checkmark when checked*/
+.checkbox-container input:checked ~ .checkbox:after {
+    display: block;
+}
+
+/* style checkmark */
+.checkbox-container .checkbox:after {
+    /* aspect-ratio: 1/2.25; */
+    width: 1em; 
+    height: 2.25em;
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    transform: rotate(45deg);
+}
+`, "",{"version":3,"sources":["webpack://./src/view-components/add-project/add-project.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,WAAW;IACX,WAAW;IACX,uBAAuB;AAC3B;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,cAAc;IACd,mBAAmB;IACnB,cAAc;AAClB;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,YAAY;IACZ,UAAU;IACV,eAAe;IACf,uBAAuB;AAC3B;;AAEA,oCAAoC;AACpC;IACI,kBAAkB;IAClB,UAAU;IACV,eAAe;IACf,SAAS;IACT,QAAQ;AACZ;;AAEA,2BAA2B;AAC3B;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,WAAW;IACX,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,wBAAwB;AAC5B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA,+CAA+C;AAC/C;IACI,WAAW;IACX,kBAAkB;IAClB,aAAa;AACjB;;AAEA,+BAA+B;AAC/B;IACI,cAAc;AAClB;;AAEA,oBAAoB;AACpB;IACI,0BAA0B;IAC1B,UAAU;IACV,cAAc;IACd,mBAAmB;IACnB,2BAA2B;IAC3B,wBAAwB;AAC5B","sourcesContent":[".add-project-container {\n    display: flex;\n    width: 100%;\n    height: 5em;\n    justify-content: center;\n}\n\n.add-project-form {\n    height: 100%;\n    width: 100%;\n}\n\n#add-project-text-input {\n    width: 100%;\n    height: 100%;\n    font-size: 2em;\n    font-weight: bolder;\n    padding: 0 1em;\n}\n\n.checkbox-container {\n    position:relative;\n    display: block;\n    height: 100%;\n    width: 5em;\n    cursor: pointer;\n    border: 1px solid black;\n}\n\n/* hide browser's default checkbox */\n.checkbox-container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n}\n\n/* create custom checkbox */\n.checkbox {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height:100%;\n    width: 100%;\n    background-color: #eeeeee;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0 0 0.4em 0.2em;\n}\n\n.checkbox-container:hover input ~ .checkbox {\n    background-color: #cccccc;\n}\n\n.checkbox-container input:checked ~ .checkbox {\n    background-color: #2196f3;\n}\n\n/* create checkmark (hidden when not checked) */\n.checkbox:after {\n    content: '';\n    position: absolute;\n    display: none;\n}\n\n/* show checkmark when checked*/\n.checkbox-container input:checked ~ .checkbox:after {\n    display: block;\n}\n\n/* style checkmark */\n.checkbox-container .checkbox:after {\n    /* aspect-ratio: 1/2.25; */\n    width: 1em; \n    height: 2.25em;\n    border: solid white;\n    border-width: 0 10px 10px 0;\n    transform: rotate(45deg);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -239,7 +320,9 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.navbar-container {
     display: flex;
+    width: 100%;
     height: 5em;
+    justify-content: center;
 }
 
 .navbar-icon {
@@ -250,7 +333,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.navbar-container {
 .navbar-header {
     font-weight: bolder;
     font-size: 5em;
-}`, "",{"version":3,"sources":["webpack://./src/view-components/navbar/navbar.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,WAAW;AACf;;AAEA;IACI,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,mBAAmB;IACnB,cAAc;AAClB","sourcesContent":[".navbar-container {\n    display: flex;\n    height: 5em;\n}\n\n.navbar-icon {\n    width: auto;\n    height: 100%;\n}\n\n.navbar-header {\n    font-weight: bolder;\n    font-size: 5em;\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/view-components/navbar/navbar.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,WAAW;IACX,WAAW;IACX,uBAAuB;AAC3B;;AAEA;IACI,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,mBAAmB;IACnB,cAAc;AAClB","sourcesContent":[".navbar-container {\n    display: flex;\n    width: 100%;\n    height: 5em;\n    justify-content: center;\n}\n\n.navbar-icon {\n    width: auto;\n    height: 100%;\n}\n\n.navbar-header {\n    font-weight: bolder;\n    font-size: 5em;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -282,10 +365,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.project-container {
     background-color: aquamarine;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: relative;
-}`, "",{"version":3,"sources":["webpack://./src/view-components/project-container/project-container.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,4BAA4B;IAC5B,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;IACnB,kBAAkB;AACtB","sourcesContent":[".project-container {\n    width: 100%;\n    height: 100%;\n    background-color: aquamarine;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n}"],"sourceRoot":""}]);
+    padding: 5% 5%;
+}`, "",{"version":3,"sources":["webpack://./src/view-components/project-container/project-container.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,4BAA4B;IAC5B,aAAa;IACb,sBAAsB;IACtB,6BAA6B;IAC7B,mBAAmB;IACnB,kBAAkB;IAClB,cAAc;AAClB","sourcesContent":[".project-container {\n    width: 100%;\n    height: 100%;\n    background-color: aquamarine;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n    position: relative;\n    padding: 5% 5%;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1232,8 +1316,58 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class AddProject {
+    constructor() {
+        this.projectContainer = document.querySelector('.project-container');
+        this.container = document.createElement('div');
+        this.checkboxContainer = document.createElement('label');
+        this.checkboxInput = document.createElement('input');
+        this.checkbox = document.createElement('span');
+        this.form = document.createElement('form');
+        this.textInput = document.createElement('input');
+    }
+
     load() {
-        console.log('addProject loaded');
+        this.loadContainer();
+        this.loadCheckbox();
+        this.loadForm();
+        // this.loadDueDate();
+    };
+
+    loadContainer() {
+        this.container.classList.add('add-project-container');
+        this.projectContainer.appendChild(this.container);
+    }
+
+    loadForm() {
+        this.form.classList.add('add-project-form');
+        this.loadTextInput();
+        this.container.appendChild(this.form);
+    }
+
+    loadTextInput() {
+        this.textInput.type = 'text';
+        this.textInput.id = 'add-project-text-input';
+        this.textInput.placeholder = 'Groceries...'
+        this.form.appendChild(this.textInput);
+    }
+
+    loadCheckbox() {
+        this.loadCheckboxContainer();
+        this.loadCheckboxInput();
+
+    }
+
+    loadCheckboxContainer() {
+        this.checkboxContainer.classList.add('checkbox-container');
+        this.container.appendChild(this.checkboxContainer);
+    }
+
+    loadCheckboxInput() {
+        this.checkboxInput.type = 'checkbox';
+        this.checkbox.classList.add('checkbox');
+
+        this.checkboxContainer.appendChild(this.checkboxInput);
+        this.checkboxContainer.appendChild(this.checkbox);
     };
 };
 
@@ -1383,32 +1517,32 @@ __webpack_require__.r(__webpack_exports__);
 class Navbar {
     constructor() {
         this.projectContainer = document.querySelector('.project-container');
-        this.navbarContainer = document.createElement('div');
+        this.container = document.createElement('div');
         this.header = document.createElement('h1');
         this.icon = new Image();
     }
 
     async load() {
-        this.loadNavbarContainer();
+        this.loadContainer();
         this.loadIcon();
         this.loadHeader();
     };
 
-    loadNavbarContainer() {
-        this.navbarContainer.classList.add('navbar-container');
-        this.projectContainer.appendChild(this.navbarContainer);
+    loadContainer() {
+        this.container.classList.add('navbar-container');
+        this.projectContainer.appendChild(this.container);
     };
 
     loadIcon() {
         this.icon.src = _to_do_list_png__WEBPACK_IMPORTED_MODULE_1__;
         this.icon.classList.add('navbar-icon');
-        this.navbarContainer.appendChild(this.icon);
+        this.container.appendChild(this.icon);
     };
 
     loadHeader() {
         this.header.textContent = 'To-do list'
         this.header.classList.add('navbar-header');
-        this.navbarContainer.appendChild(this.header);
+        this.container.appendChild(this.header);
     };
 };
 
