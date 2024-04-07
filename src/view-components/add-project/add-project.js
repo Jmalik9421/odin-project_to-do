@@ -50,7 +50,7 @@ export default class AddProject {
         this.fieldContainer.appendChild(this.textInput);
     };
     loadSubmitBtn() {
-        this.submitBtn.classList.add('submit-btn');
+        this.submitBtn.classList.add('add-project-btn');
         this.submitBtn.textContent = 'Add';
         this.fieldContainer.appendChild(this.submitBtn);
     };
