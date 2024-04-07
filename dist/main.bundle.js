@@ -1544,11 +1544,15 @@ class AddProject {
         this.submitBtn.addEventListener('click', () => {
             const project = this.textInput.value;
             this.emitAddedProjectEvent(project); // emit event when project is added
+            this.clearTextInputField();
         });
     }
     emitAddedProjectEvent(project) {
         const event = new CustomEvent('projectAdded', { detail: project });
         document.dispatchEvent(event);
+    }
+    clearTextInputField() {
+        this.textInput.value = ''
     }
 };
 
@@ -1626,6 +1630,9 @@ class ListOfToDoProjects {
     load() {
         this.loadContainer();
         this.loadHeader();
+        this.loadFieldContainer();
+        this.loadCheckbox();
+        this.loadForm();
         this.loadFieldContainer();
         this.loadCheckbox();
         this.loadForm();

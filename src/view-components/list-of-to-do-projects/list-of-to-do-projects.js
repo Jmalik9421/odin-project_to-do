@@ -20,6 +20,9 @@ export default class ListOfToDoProjects {
         this.loadFieldContainer();
         this.loadCheckbox();
         this.loadForm();
+        this.loadFieldContainer();
+        this.loadCheckbox();
+        this.loadForm();
         // this.loadDueDate();
     };
     loadContainer() {
