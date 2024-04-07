@@ -130,7 +130,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.add-project-container {
     position:relative;
     display: block;
     height: 100%;
-    width: 5em;
+    min-height: 5em;
     cursor: pointer;
     border: 1px solid black;
 }
@@ -187,7 +187,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.add-project-container {
     border-width: 0 10px 10px 0;
     transform: rotate(45deg);
 }
-`, "",{"version":3,"sources":["webpack://./src/view-components/add-project/add-project.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;IACtB,WAAW;AACf;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,WAAW;IACX,WAAW;IACX,uBAAuB;AAC3B;;AAEA;;;GAGG;;AAEH;IACI,WAAW;IACX,YAAY;IACZ,cAAc;IACd,mBAAmB;IACnB,cAAc;AAClB;;AAEA;IACI,yBAAyB;IACzB,yBAAyB;IACzB,kBAAkB;IAClB,cAAc;IACd,eAAe;IACf,cAAc;IACd,mBAAmB;IACnB,cAAc;IACd,kBAAkB;IAClB,mDAAmD;IACnD,UAAU;IACV,WAAW;AACf;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,0CAA0C;IAC1C,2BAA2B;AAC/B;;AAEA;IACI,gBAAgB;IAChB,wBAAwB;AAC5B;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,YAAY;IACZ,UAAU;IACV,eAAe;IACf,uBAAuB;AAC3B;;AAEA,oCAAoC;AACpC;IACI,kBAAkB;IAClB,UAAU;IACV,eAAe;IACf,SAAS;IACT,QAAQ;AACZ;;AAEA,2BAA2B;AAC3B;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,WAAW;IACX,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,wBAAwB;AAC5B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA,+CAA+C;AAC/C;IACI,WAAW;IACX,kBAAkB;IAClB,aAAa;AACjB;;AAEA,+BAA+B;AAC/B;IACI,cAAc;AAClB;;AAEA,oBAAoB;AACpB;IACI,0BAA0B;IAC1B,UAAU;IACV,cAAc;IACd,mBAAmB;IACnB,2BAA2B;IAC3B,wBAAwB;AAC5B","sourcesContent":[".add-project-container {\n    display: flex;\n    flex-direction: column;\n    width: 100%;    \n}\n\n.add-project-header {\n    position: relative;\n    font-size: 2.75em;\n    margin-bottom: 0.5em;\n}\n\n.add-project-header:after {\n    position: absolute;\n    content: '';\n    top: 100%;\n    left: 0;\n    width: 33.3%;\n    border: 0.1em solid black;\n    border-radius: 10em;\n}\n\n.add-field-container {\n    display: flex;\n    width: 100%;\n    height: 5em;\n    justify-content: center;\n}\n\n/* .add-project-form {\n    height: 100%;\n    width: 100%;\n} */\n\n#text-input {\n    width: 100%;\n    height: 100%;\n    font-size: 2em;\n    font-weight: bolder;\n    padding: 0 1em;\n}\n\n.add-project-btn {\n    background-color: #000000;\n    border: 2px solid #1A1A1A;\n    border-radius: 1em;\n    color: #FFFFFF;\n    cursor: pointer;\n    font-size: 1em;\n    font-weight: bolder;\n    padding: 0 2em;\n    text-align: center;\n    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);\n    width: 6em;\n    height: 5em;\n}\n\n.add-project-btn:disabled {\n    pointer-events: none;\n}\n\n.add-project-btn:hover {\n    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;\n    transform: translateY(-2px);\n}\n\n.add-project-btn:active {\n    box-shadow: none;\n    transform: translateY(0);\n}\n\n.checkbox-container {\n    position:relative;\n    display: block;\n    height: 100%;\n    width: 5em;\n    cursor: pointer;\n    border: 1px solid black;\n}\n\n/* hide browser's default checkbox */\n.checkbox-container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n}\n\n/* create custom checkbox */\n.checkbox {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height:100%;\n    width: 100%;\n    background-color: #eeeeee;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0 0 0.4em 0.2em;\n}\n\n.checkbox-container:hover input ~ .checkbox {\n    background-color: #cccccc;\n}\n\n.checkbox-container input:checked ~ .checkbox {\n    background-color: #2196f3;\n}\n\n/* create checkmark (hidden when not checked) */\n.checkbox:after {\n    content: '';\n    position: absolute;\n    display: none;\n}\n\n/* show checkmark when checked*/\n.checkbox-container input:checked ~ .checkbox:after {\n    display: block;\n}\n\n/* style checkmark */\n.checkbox-container .checkbox:after {\n    /* aspect-ratio: 1/2.25; */\n    width: 1em; \n    height: 2.25em;\n    border: solid white;\n    border-width: 0 10px 10px 0;\n    transform: rotate(45deg);\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/view-components/add-project/add-project.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;IACtB,WAAW;AACf;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,WAAW;IACX,WAAW;IACX,uBAAuB;AAC3B;;AAEA;;;GAGG;;AAEH;IACI,WAAW;IACX,YAAY;IACZ,cAAc;IACd,mBAAmB;IACnB,cAAc;AAClB;;AAEA;IACI,yBAAyB;IACzB,yBAAyB;IACzB,kBAAkB;IAClB,cAAc;IACd,eAAe;IACf,cAAc;IACd,mBAAmB;IACnB,cAAc;IACd,kBAAkB;IAClB,mDAAmD;IACnD,UAAU;IACV,WAAW;AACf;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,0CAA0C;IAC1C,2BAA2B;AAC/B;;AAEA;IACI,gBAAgB;IAChB,wBAAwB;AAC5B;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,YAAY;IACZ,eAAe;IACf,eAAe;IACf,uBAAuB;AAC3B;;AAEA,oCAAoC;AACpC;IACI,kBAAkB;IAClB,UAAU;IACV,eAAe;IACf,SAAS;IACT,QAAQ;AACZ;;AAEA,2BAA2B;AAC3B;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,WAAW;IACX,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,wBAAwB;AAC5B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA,+CAA+C;AAC/C;IACI,WAAW;IACX,kBAAkB;IAClB,aAAa;AACjB;;AAEA,+BAA+B;AAC/B;IACI,cAAc;AAClB;;AAEA,oBAAoB;AACpB;IACI,0BAA0B;IAC1B,UAAU;IACV,cAAc;IACd,mBAAmB;IACnB,2BAA2B;IAC3B,wBAAwB;AAC5B","sourcesContent":[".add-project-container {\n    display: flex;\n    flex-direction: column;\n    width: 100%;    \n}\n\n.add-project-header {\n    position: relative;\n    font-size: 2.75em;\n    margin-bottom: 0.5em;\n}\n\n.add-project-header:after {\n    position: absolute;\n    content: '';\n    top: 100%;\n    left: 0;\n    width: 33.3%;\n    border: 0.1em solid black;\n    border-radius: 10em;\n}\n\n.add-field-container {\n    display: flex;\n    width: 100%;\n    height: 5em;\n    justify-content: center;\n}\n\n/* .add-project-form {\n    height: 100%;\n    width: 100%;\n} */\n\n#text-input {\n    width: 100%;\n    height: 100%;\n    font-size: 2em;\n    font-weight: bolder;\n    padding: 0 1em;\n}\n\n.add-project-btn {\n    background-color: #000000;\n    border: 2px solid #1A1A1A;\n    border-radius: 1em;\n    color: #FFFFFF;\n    cursor: pointer;\n    font-size: 1em;\n    font-weight: bolder;\n    padding: 0 2em;\n    text-align: center;\n    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);\n    width: 6em;\n    height: 5em;\n}\n\n.add-project-btn:disabled {\n    pointer-events: none;\n}\n\n.add-project-btn:hover {\n    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;\n    transform: translateY(-2px);\n}\n\n.add-project-btn:active {\n    box-shadow: none;\n    transform: translateY(0);\n}\n\n.checkbox-container {\n    position:relative;\n    display: block;\n    height: 100%;\n    min-height: 5em;\n    cursor: pointer;\n    border: 1px solid black;\n}\n\n/* hide browser's default checkbox */\n.checkbox-container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n}\n\n/* create custom checkbox */\n.checkbox {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height:100%;\n    width: 100%;\n    background-color: #eeeeee;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0 0 0.4em 0.2em;\n}\n\n.checkbox-container:hover input ~ .checkbox {\n    background-color: #cccccc;\n}\n\n.checkbox-container input:checked ~ .checkbox {\n    background-color: #2196f3;\n}\n\n/* create checkmark (hidden when not checked) */\n.checkbox:after {\n    content: '';\n    position: absolute;\n    display: none;\n}\n\n/* show checkmark when checked*/\n.checkbox-container input:checked ~ .checkbox:after {\n    display: block;\n}\n\n/* style checkmark */\n.checkbox-container .checkbox:after {\n    /* aspect-ratio: 1/2.25; */\n    width: 1em; \n    height: 2.25em;\n    border: solid white;\n    border-width: 0 10px 10px 0;\n    transform: rotate(45deg);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -271,13 +271,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.list-of-to-do-projects-container {
     width: 100%;
 }
 
-.list-of-to-do-projects-header {
+.to-do-header {
     position: relative;
     font-size: 2.75em;
     margin-bottom: 0.5em;
 }
 
-.list-of-to-do-projects-header:after {
+.to-do-header:after {
     position: absolute;
     content: '';
     top: 100%;
@@ -287,7 +287,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.list-of-to-do-projects-container {
     border-radius: 10em;
 }
 
-.add-field-container {
+.to-do-field-container {
     display: flex;
     width: 100%;
     height: 5em;
@@ -299,12 +299,46 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.list-of-to-do-projects-container {
     width: 100%;
 }
 
-#list-of-to-do-projects-text-input {
+#list-of-to-do-projects-text {
     width: 100%;
     height: 100%;
     font-size: 2em;
     font-weight: bolder;
     padding: 0 1em;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.delete-project-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 1em;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bolder;
+    padding: 0 2em;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    width: 6em;
+    height: 5em;
+}
+
+.delete-project-btn:disabled {
+    pointer-events: none;
+}
+
+.delete-project-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.delete-project-btn:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 .checkbox-container {
@@ -368,7 +402,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.list-of-to-do-projects-container {
     border-width: 0 10px 10px 0;
     transform: rotate(45deg);
 }
-`, "",{"version":3,"sources":["webpack://./src/view-components/list-of-to-do-projects/list-of-to-do-projects.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;IACtB,WAAW;AACf;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,WAAW;IACX,WAAW;IACX,uBAAuB;AAC3B;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,cAAc;IACd,mBAAmB;IACnB,cAAc;AAClB;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,YAAY;IACZ,UAAU;IACV,eAAe;IACf,uBAAuB;AAC3B;;AAEA,oCAAoC;AACpC;IACI,kBAAkB;IAClB,UAAU;IACV,eAAe;IACf,SAAS;IACT,QAAQ;AACZ;;AAEA,2BAA2B;AAC3B;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,WAAW;IACX,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,wBAAwB;AAC5B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA,+CAA+C;AAC/C;IACI,WAAW;IACX,kBAAkB;IAClB,aAAa;AACjB;;AAEA,+BAA+B;AAC/B;IACI,cAAc;AAClB;;AAEA,oBAAoB;AACpB;IACI,0BAA0B;IAC1B,UAAU;IACV,cAAc;IACd,mBAAmB;IACnB,2BAA2B;IAC3B,wBAAwB;AAC5B","sourcesContent":[".list-of-to-do-projects-container {\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n}\n\n.list-of-to-do-projects-header {\n    position: relative;\n    font-size: 2.75em;\n    margin-bottom: 0.5em;\n}\n\n.list-of-to-do-projects-header:after {\n    position: absolute;\n    content: '';\n    top: 100%;\n    left: 0;\n    width: 33.3%;\n    border: 0.1em solid black;\n    border-radius: 10em;\n}\n\n.add-field-container {\n    display: flex;\n    width: 100%;\n    height: 5em;\n    justify-content: center;\n}\n\n.list-of-to-do-projects-form {\n    height: 100%;\n    width: 100%;\n}\n\n#list-of-to-do-projects-text-input {\n    width: 100%;\n    height: 100%;\n    font-size: 2em;\n    font-weight: bolder;\n    padding: 0 1em;\n}\n\n.checkbox-container {\n    position:relative;\n    display: block;\n    height: 100%;\n    width: 5em;\n    cursor: pointer;\n    border: 1px solid black;\n}\n\n/* hide browser's default checkbox */\n.checkbox-container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n}\n\n/* create custom checkbox */\n.checkbox {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height:100%;\n    width: 100%;\n    background-color: #eeeeee;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0 0 0.4em 0.2em;\n}\n\n.checkbox-container:hover input ~ .checkbox {\n    background-color: #cccccc;\n}\n\n.checkbox-container input:checked ~ .checkbox {\n    background-color: #2196f3;\n}\n\n/* create checkmark (hidden when not checked) */\n.checkbox:after {\n    content: '';\n    position: absolute;\n    display: none;\n}\n\n/* show checkmark when checked*/\n.checkbox-container input:checked ~ .checkbox:after {\n    display: block;\n}\n\n/* style checkmark */\n.checkbox-container .checkbox:after {\n    /* aspect-ratio: 1/2.25; */\n    width: 1em; \n    height: 2.25em;\n    border: solid white;\n    border-width: 0 10px 10px 0;\n    transform: rotate(45deg);\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/view-components/list-of-to-do-projects/list-of-to-do-projects.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;IACtB,WAAW;AACf;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,WAAW;IACX,WAAW;IACX,uBAAuB;AAC3B;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,cAAc;IACd,mBAAmB;IACnB,cAAc;IACd,uBAAuB;IACvB,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,yBAAyB;IACzB,yBAAyB;IACzB,kBAAkB;IAClB,cAAc;IACd,eAAe;IACf,cAAc;IACd,mBAAmB;IACnB,cAAc;IACd,kBAAkB;IAClB,mDAAmD;IACnD,UAAU;IACV,WAAW;AACf;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,0CAA0C;IAC1C,2BAA2B;AAC/B;;AAEA;IACI,gBAAgB;IAChB,wBAAwB;AAC5B;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,YAAY;IACZ,UAAU;IACV,eAAe;IACf,uBAAuB;AAC3B;;AAEA,oCAAoC;AACpC;IACI,kBAAkB;IAClB,UAAU;IACV,eAAe;IACf,SAAS;IACT,QAAQ;AACZ;;AAEA,2BAA2B;AAC3B;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,WAAW;IACX,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,wBAAwB;AAC5B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA,+CAA+C;AAC/C;IACI,WAAW;IACX,kBAAkB;IAClB,aAAa;AACjB;;AAEA,+BAA+B;AAC/B;IACI,cAAc;AAClB;;AAEA,oBAAoB;AACpB;IACI,0BAA0B;IAC1B,UAAU;IACV,cAAc;IACd,mBAAmB;IACnB,2BAA2B;IAC3B,wBAAwB;AAC5B","sourcesContent":[".list-of-to-do-projects-container {\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n}\n\n.to-do-header {\n    position: relative;\n    font-size: 2.75em;\n    margin-bottom: 0.5em;\n}\n\n.to-do-header:after {\n    position: absolute;\n    content: '';\n    top: 100%;\n    left: 0;\n    width: 33.3%;\n    border: 0.1em solid black;\n    border-radius: 10em;\n}\n\n.to-do-field-container {\n    display: flex;\n    width: 100%;\n    height: 5em;\n    justify-content: center;\n}\n\n.list-of-to-do-projects-form {\n    height: 100%;\n    width: 100%;\n}\n\n#list-of-to-do-projects-text {\n    width: 100%;\n    height: 100%;\n    font-size: 2em;\n    font-weight: bolder;\n    padding: 0 1em;\n    background-color: white;\n    border: 1px solid grey;\n}\n\n.delete-project-btn {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: #000000;\n    border: 2px solid #1A1A1A;\n    border-radius: 1em;\n    color: #FFFFFF;\n    cursor: pointer;\n    font-size: 1em;\n    font-weight: bolder;\n    padding: 0 2em;\n    text-align: center;\n    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);\n    width: 6em;\n    height: 5em;\n}\n\n.delete-project-btn:disabled {\n    pointer-events: none;\n}\n\n.delete-project-btn:hover {\n    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;\n    transform: translateY(-2px);\n}\n\n.delete-project-btn:active {\n    box-shadow: none;\n    transform: translateY(0);\n}\n\n.checkbox-container {\n    position:relative;\n    display: block;\n    height: 100%;\n    width: 5em;\n    cursor: pointer;\n    border: 1px solid black;\n}\n\n/* hide browser's default checkbox */\n.checkbox-container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n}\n\n/* create custom checkbox */\n.checkbox {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height:100%;\n    width: 100%;\n    background-color: #eeeeee;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0 0 0.4em 0.2em;\n}\n\n.checkbox-container:hover input ~ .checkbox {\n    background-color: #cccccc;\n}\n\n.checkbox-container input:checked ~ .checkbox {\n    background-color: #2196f3;\n}\n\n/* create checkmark (hidden when not checked) */\n.checkbox:after {\n    content: '';\n    position: absolute;\n    display: none;\n}\n\n/* show checkmark when checked*/\n.checkbox-container input:checked ~ .checkbox:after {\n    display: block;\n}\n\n/* style checkmark */\n.checkbox-container .checkbox:after {\n    /* aspect-ratio: 1/2.25; */\n    width: 1em; \n    height: 2.25em;\n    border: solid white;\n    border-width: 0 10px 10px 0;\n    transform: rotate(45deg);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1478,9 +1512,8 @@ class AddProject {
         this.checkboxContainer = document.createElement('label');
         this.checkboxInput = document.createElement('input');
         this.checkbox = document.createElement('span');
-        // this.form = document.createElement('div');
         this.textInput = document.createElement('input');
-        this.submitBtn = document.createElement('button');
+        this.addBtn = document.createElement('button');
     }
 
     // loading html elements in the dom
@@ -1490,7 +1523,7 @@ class AddProject {
         this.loadFieldContainer();
         this.loadCheckbox();
         this.loadTextInput();
-        this.loadSubmitBtn();
+        this.loadAddBtn();
         // this.loadDueDate();
     };
     loadContainer() {
@@ -1506,22 +1539,16 @@ class AddProject {
         this.fieldContainer.classList.add('add-field-container');
         this.container.appendChild(this.fieldContainer);
     };
-    // loadForm() {
-    //     this.form.classList.add('add-project-form');
-    //     this.loadTextInput();
-    //     this.loadSubmitBtn();
-    //     this.fieldContainer.appendChild(this.form);
-    // };
     loadTextInput() {
         this.textInput.type = 'text';
         this.textInput.id = 'text-input';
         this.textInput.placeholder = 'Groceries...'
         this.fieldContainer.appendChild(this.textInput);
     };
-    loadSubmitBtn() {
-        this.submitBtn.classList.add('add-project-btn');
-        this.submitBtn.textContent = 'Add';
-        this.fieldContainer.appendChild(this.submitBtn);
+    loadAddBtn() {
+        this.addBtn.classList.add('add-project-btn');
+        this.addBtn.textContent = 'Add';
+        this.fieldContainer.appendChild(this.addBtn);
     };
     loadCheckbox() {
         this.loadCheckboxContainer();
@@ -1541,7 +1568,7 @@ class AddProject {
 
     // specifying logic to add project
     add() {
-        this.submitBtn.addEventListener('click', () => {
+        this.addBtn.addEventListener('click', () => {
             const project = this.textInput.value;
             this.emitAddedProjectEvent(project); // emit event when project is added
             this.clearTextInputField();
@@ -1622,8 +1649,9 @@ class ListOfToDoProjects {
         this.checkboxContainer = document.createElement('label');
         this.checkboxInput = document.createElement('input');
         this.checkbox = document.createElement('span');
-        this.form = document.createElement('form');
-        this.textInput = document.createElement('input');
+        this.text = document.createElement('p');
+        this.deleteBtn = document.createElement('button');
+        this.deleteBtnText = document.createElement('p');
     }
 
     // loading html elements in the dom
@@ -1632,10 +1660,8 @@ class ListOfToDoProjects {
         this.loadHeader();
         this.loadFieldContainer();
         this.loadCheckbox();
-        this.loadForm();
-        this.loadFieldContainer();
-        this.loadCheckbox();
-        this.loadForm();
+        this.loadText();
+        this.loadDeleteBtn();
         // this.loadDueDate();
     };
     loadContainer() {
@@ -1643,24 +1669,28 @@ class ListOfToDoProjects {
         this.projectContainer.appendChild(this.container);
     };
     loadHeader() {
-        this.header.classList.add('list-of-to-do-projects-header');
+        this.header.classList.add('to-do-header');
         this.header.textContent = 'Projects to-do';
         this.container.appendChild(this.header);
     };
     loadFieldContainer() {
-        this.fieldContainer.classList.add('add-field-container');
+        this.fieldContainer.classList.add('to-do-field-container');
         this.container.appendChild(this.fieldContainer);
     };
-    loadForm() {
-        this.form.classList.add('list-of-to-do-projects-form');
-        this.loadTextInput();
-        this.fieldContainer.appendChild(this.form);
+    loadText() {
+        this.text.id = 'list-of-to-do-projects-text';
+        // this.text.placeholder = 'Essay...'
+        this.fieldContainer.appendChild(this.text);
     };
-    loadTextInput() {
-        this.textInput.type = 'text';
-        this.textInput.id = 'list-of-to-do-projects-text-input';
-        this.textInput.placeholder = 'Essay...'
-        this.form.appendChild(this.textInput);
+    loadDeleteBtn() {
+        this.deleteBtn.classList.add('delete-project-btn');
+        this.loadDeleteBtnText();
+        this.fieldContainer.appendChild(this.deleteBtn);
+    };
+    loadDeleteBtnText() {
+        this.deleteBtnText.id = 'delete-btn-text';
+        this.deleteBtnText.textContent = 'Delete'
+        this.deleteBtn.appendChild(this.deleteBtnText);
     };
     loadCheckbox() {
         this.loadCheckboxContainer();
@@ -1680,7 +1710,7 @@ class ListOfToDoProjects {
 
     // pushing added project to this list-of-to-do-project list
     renderList(list) {
-        console.log(listOfToDoProjects);
+        console.log(list);
     }
 };
 

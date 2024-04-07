@@ -9,8 +9,9 @@ export default class ListOfToDoProjects {
         this.checkboxContainer = document.createElement('label');
         this.checkboxInput = document.createElement('input');
         this.checkbox = document.createElement('span');
-        this.form = document.createElement('form');
-        this.textInput = document.createElement('input');
+        this.text = document.createElement('p');
+        this.deleteBtn = document.createElement('button');
+        this.deleteBtnText = document.createElement('p');
     }
 
     // loading html elements in the dom
@@ -19,10 +20,8 @@ export default class ListOfToDoProjects {
         this.loadHeader();
         this.loadFieldContainer();
         this.loadCheckbox();
-        this.loadForm();
-        this.loadFieldContainer();
-        this.loadCheckbox();
-        this.loadForm();
+        this.loadText();
+        this.loadDeleteBtn();
         // this.loadDueDate();
     };
     loadContainer() {
@@ -30,24 +29,28 @@ export default class ListOfToDoProjects {
         this.projectContainer.appendChild(this.container);
     };
     loadHeader() {
-        this.header.classList.add('list-of-to-do-projects-header');
+        this.header.classList.add('to-do-header');
         this.header.textContent = 'Projects to-do';
         this.container.appendChild(this.header);
     };
     loadFieldContainer() {
-        this.fieldContainer.classList.add('add-field-container');
+        this.fieldContainer.classList.add('to-do-field-container');
         this.container.appendChild(this.fieldContainer);
     };
-    loadForm() {
-        this.form.classList.add('list-of-to-do-projects-form');
-        this.loadTextInput();
-        this.fieldContainer.appendChild(this.form);
+    loadText() {
+        this.text.id = 'list-of-to-do-projects-text';
+        // this.text.placeholder = 'Essay...'
+        this.fieldContainer.appendChild(this.text);
     };
-    loadTextInput() {
-        this.textInput.type = 'text';
-        this.textInput.id = 'list-of-to-do-projects-text-input';
-        this.textInput.placeholder = 'Essay...'
-        this.form.appendChild(this.textInput);
+    loadDeleteBtn() {
+        this.deleteBtn.classList.add('delete-project-btn');
+        this.loadDeleteBtnText();
+        this.fieldContainer.appendChild(this.deleteBtn);
+    };
+    loadDeleteBtnText() {
+        this.deleteBtnText.id = 'delete-btn-text';
+        this.deleteBtnText.textContent = 'Delete'
+        this.deleteBtn.appendChild(this.deleteBtnText);
     };
     loadCheckbox() {
         this.loadCheckboxContainer();
@@ -67,6 +70,6 @@ export default class ListOfToDoProjects {
 
     // pushing added project to this list-of-to-do-project list
     renderList(list) {
-        console.log(listOfToDoProjects);
+        console.log(list);
     }
 };

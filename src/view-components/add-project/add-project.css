@@ -73,7 +73,7 @@
     position:relative;
     display: block;
     height: 100%;
-    width: 5em;
+    min-height: 5em;
     cursor: pointer;
     border: 1px solid black;
 }

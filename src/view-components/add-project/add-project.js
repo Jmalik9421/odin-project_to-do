@@ -9,9 +9,8 @@ export default class AddProject {
         this.checkboxContainer = document.createElement('label');
         this.checkboxInput = document.createElement('input');
         this.checkbox = document.createElement('span');
-        // this.form = document.createElement('div');
         this.textInput = document.createElement('input');
-        this.submitBtn = document.createElement('button');
+        this.addBtn = document.createElement('button');
     }
 
     // loading html elements in the dom
@@ -21,7 +20,7 @@ export default class AddProject {
         this.loadFieldContainer();
         this.loadCheckbox();
         this.loadTextInput();
-        this.loadSubmitBtn();
+        this.loadAddBtn();
         // this.loadDueDate();
     };
     loadContainer() {
@@ -37,22 +36,16 @@ export default class AddProject {
         this.fieldContainer.classList.add('add-field-container');
         this.container.appendChild(this.fieldContainer);
     };
-    // loadForm() {
-    //     this.form.classList.add('add-project-form');
-    //     this.loadTextInput();
-    //     this.loadSubmitBtn();
-    //     this.fieldContainer.appendChild(this.form);
-    // };
     loadTextInput() {
         this.textInput.type = 'text';
         this.textInput.id = 'text-input';
         this.textInput.placeholder = 'Groceries...'
         this.fieldContainer.appendChild(this.textInput);
     };
-    loadSubmitBtn() {
-        this.submitBtn.classList.add('add-project-btn');
-        this.submitBtn.textContent = 'Add';
-        this.fieldContainer.appendChild(this.submitBtn);
+    loadAddBtn() {
+        this.addBtn.classList.add('add-project-btn');
+        this.addBtn.textContent = 'Add';
+        this.fieldContainer.appendChild(this.addBtn);
     };
     loadCheckbox() {
         this.loadCheckboxContainer();
@@ -72,7 +65,7 @@ export default class AddProject {
 
     // specifying logic to add project
     add() {
-        this.submitBtn.addEventListener('click', () => {
+        this.addBtn.addEventListener('click', () => {
             const project = this.textInput.value;
             this.emitAddedProjectEvent(project); // emit event when project is added
             this.clearTextInputField();
