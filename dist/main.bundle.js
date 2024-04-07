@@ -83,12 +83,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.add-project-container {
     justify-content: center;
 }
 
-.add-project-form {
+/* .add-project-form {
     height: 100%;
     width: 100%;
-}
+} */
 
-#add-project-text-input {
+#text-input {
     width: 100%;
     height: 100%;
     font-size: 2em;
@@ -157,7 +157,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.add-project-container {
     border-width: 0 10px 10px 0;
     transform: rotate(45deg);
 }
-`, "",{"version":3,"sources":["webpack://./src/view-components/add-project/add-project.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,WAAW;IACX,WAAW;IACX,uBAAuB;AAC3B;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,cAAc;IACd,mBAAmB;IACnB,cAAc;AAClB;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,YAAY;IACZ,UAAU;IACV,eAAe;IACf,uBAAuB;AAC3B;;AAEA,oCAAoC;AACpC;IACI,kBAAkB;IAClB,UAAU;IACV,eAAe;IACf,SAAS;IACT,QAAQ;AACZ;;AAEA,2BAA2B;AAC3B;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,WAAW;IACX,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,wBAAwB;AAC5B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA,+CAA+C;AAC/C;IACI,WAAW;IACX,kBAAkB;IAClB,aAAa;AACjB;;AAEA,+BAA+B;AAC/B;IACI,cAAc;AAClB;;AAEA,oBAAoB;AACpB;IACI,0BAA0B;IAC1B,UAAU;IACV,cAAc;IACd,mBAAmB;IACnB,2BAA2B;IAC3B,wBAAwB;AAC5B","sourcesContent":[".add-project-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.add-project-header {\n    position: relative;\n    font-size: 2.75em;\n    margin-bottom: 0.5em;\n}\n\n.add-project-header:after {\n    position: absolute;\n    content: '';\n    top: 100%;\n    left: 0;\n    width: 33.3%;\n    border: 0.1em solid black;\n    border-radius: 10em;\n}\n\n.add-field-container {\n    display: flex;\n    width: 100%;\n    height: 5em;\n    justify-content: center;\n}\n\n.add-project-form {\n    height: 100%;\n    width: 100%;\n}\n\n#add-project-text-input {\n    width: 100%;\n    height: 100%;\n    font-size: 2em;\n    font-weight: bolder;\n    padding: 0 1em;\n}\n\n.checkbox-container {\n    position:relative;\n    display: block;\n    height: 100%;\n    width: 5em;\n    cursor: pointer;\n    border: 1px solid black;\n}\n\n/* hide browser's default checkbox */\n.checkbox-container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n}\n\n/* create custom checkbox */\n.checkbox {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height:100%;\n    width: 100%;\n    background-color: #eeeeee;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0 0 0.4em 0.2em;\n}\n\n.checkbox-container:hover input ~ .checkbox {\n    background-color: #cccccc;\n}\n\n.checkbox-container input:checked ~ .checkbox {\n    background-color: #2196f3;\n}\n\n/* create checkmark (hidden when not checked) */\n.checkbox:after {\n    content: '';\n    position: absolute;\n    display: none;\n}\n\n/* show checkmark when checked*/\n.checkbox-container input:checked ~ .checkbox:after {\n    display: block;\n}\n\n/* style checkmark */\n.checkbox-container .checkbox:after {\n    /* aspect-ratio: 1/2.25; */\n    width: 1em; \n    height: 2.25em;\n    border: solid white;\n    border-width: 0 10px 10px 0;\n    transform: rotate(45deg);\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/view-components/add-project/add-project.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,WAAW;IACX,WAAW;IACX,uBAAuB;AAC3B;;AAEA;;;GAGG;;AAEH;IACI,WAAW;IACX,YAAY;IACZ,cAAc;IACd,mBAAmB;IACnB,cAAc;AAClB;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,YAAY;IACZ,UAAU;IACV,eAAe;IACf,uBAAuB;AAC3B;;AAEA,oCAAoC;AACpC;IACI,kBAAkB;IAClB,UAAU;IACV,eAAe;IACf,SAAS;IACT,QAAQ;AACZ;;AAEA,2BAA2B;AAC3B;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,WAAW;IACX,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,wBAAwB;AAC5B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA,+CAA+C;AAC/C;IACI,WAAW;IACX,kBAAkB;IAClB,aAAa;AACjB;;AAEA,+BAA+B;AAC/B;IACI,cAAc;AAClB;;AAEA,oBAAoB;AACpB;IACI,0BAA0B;IAC1B,UAAU;IACV,cAAc;IACd,mBAAmB;IACnB,2BAA2B;IAC3B,wBAAwB;AAC5B","sourcesContent":[".add-project-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.add-project-header {\n    position: relative;\n    font-size: 2.75em;\n    margin-bottom: 0.5em;\n}\n\n.add-project-header:after {\n    position: absolute;\n    content: '';\n    top: 100%;\n    left: 0;\n    width: 33.3%;\n    border: 0.1em solid black;\n    border-radius: 10em;\n}\n\n.add-field-container {\n    display: flex;\n    width: 100%;\n    height: 5em;\n    justify-content: center;\n}\n\n/* .add-project-form {\n    height: 100%;\n    width: 100%;\n} */\n\n#text-input {\n    width: 100%;\n    height: 100%;\n    font-size: 2em;\n    font-weight: bolder;\n    padding: 0 1em;\n}\n\n.checkbox-container {\n    position:relative;\n    display: block;\n    height: 100%;\n    width: 5em;\n    cursor: pointer;\n    border: 1px solid black;\n}\n\n/* hide browser's default checkbox */\n.checkbox-container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n}\n\n/* create custom checkbox */\n.checkbox {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height:100%;\n    width: 100%;\n    background-color: #eeeeee;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0 0 0.4em 0.2em;\n}\n\n.checkbox-container:hover input ~ .checkbox {\n    background-color: #cccccc;\n}\n\n.checkbox-container input:checked ~ .checkbox {\n    background-color: #2196f3;\n}\n\n/* create checkmark (hidden when not checked) */\n.checkbox:after {\n    content: '';\n    position: absolute;\n    display: none;\n}\n\n/* show checkmark when checked*/\n.checkbox-container input:checked ~ .checkbox:after {\n    display: block;\n}\n\n/* style checkmark */\n.checkbox-container .checkbox:after {\n    /* aspect-ratio: 1/2.25; */\n    width: 1em; \n    height: 2.25em;\n    border: solid white;\n    border-width: 0 10px 10px 0;\n    transform: rotate(45deg);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -235,7 +235,109 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.list-of-to-do-projects-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-of-to-do-projects-header {
+    position: relative;
+    font-size: 2.75em;
+    margin-bottom: 0.5em;
+}
+
+.list-of-to-do-projects-header:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    width: 33.3%;
+    border: 0.1em solid black;
+    border-radius: 10em;
+}
+
+.add-field-container {
+    display: flex;
+    width: 100%;
+    height: 5em;
+    justify-content: center;
+}
+
+.list-of-to-do-projects-form {
+    height: 100%;
+    width: 100%;
+}
+
+#list-of-to-do-projects-text-input {
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    font-weight: bolder;
+    padding: 0 1em;
+}
+
+.checkbox-container {
+    position:relative;
+    display: block;
+    height: 100%;
+    width: 5em;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+/* hide browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* create custom checkbox */
+.checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0.4em 0.2em;
+}
+
+.checkbox-container:hover input ~ .checkbox {
+    background-color: #cccccc;
+}
+
+.checkbox-container input:checked ~ .checkbox {
+    background-color: #2196f3;
+}
+
+/* create checkmark (hidden when not checked) */
+.checkbox:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+/* show checkmark when checked*/
+.checkbox-container input:checked ~ .checkbox:after {
+    display: block;
+}
+
+/* style checkmark */
+.checkbox-container .checkbox:after {
+    /* aspect-ratio: 1/2.25; */
+    width: 1em; 
+    height: 2.25em;
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    transform: rotate(45deg);
+}
+`, "",{"version":3,"sources":["webpack://./src/view-components/list-of-to-do-projects/list-of-to-do-projects.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,WAAW;IACX,WAAW;IACX,uBAAuB;AAC3B;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,cAAc;IACd,mBAAmB;IACnB,cAAc;AAClB;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,YAAY;IACZ,UAAU;IACV,eAAe;IACf,uBAAuB;AAC3B;;AAEA,oCAAoC;AACpC;IACI,kBAAkB;IAClB,UAAU;IACV,eAAe;IACf,SAAS;IACT,QAAQ;AACZ;;AAEA,2BAA2B;AAC3B;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,WAAW;IACX,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,wBAAwB;AAC5B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA,+CAA+C;AAC/C;IACI,WAAW;IACX,kBAAkB;IAClB,aAAa;AACjB;;AAEA,+BAA+B;AAC/B;IACI,cAAc;AAClB;;AAEA,oBAAoB;AACpB;IACI,0BAA0B;IAC1B,UAAU;IACV,cAAc;IACd,mBAAmB;IACnB,2BAA2B;IAC3B,wBAAwB;AAC5B","sourcesContent":[".list-of-to-do-projects-container {\n    display: flex;\n    flex-direction: column;\n}\n\n.list-of-to-do-projects-header {\n    position: relative;\n    font-size: 2.75em;\n    margin-bottom: 0.5em;\n}\n\n.list-of-to-do-projects-header:after {\n    position: absolute;\n    content: '';\n    top: 100%;\n    left: 0;\n    width: 33.3%;\n    border: 0.1em solid black;\n    border-radius: 10em;\n}\n\n.add-field-container {\n    display: flex;\n    width: 100%;\n    height: 5em;\n    justify-content: center;\n}\n\n.list-of-to-do-projects-form {\n    height: 100%;\n    width: 100%;\n}\n\n#list-of-to-do-projects-text-input {\n    width: 100%;\n    height: 100%;\n    font-size: 2em;\n    font-weight: bolder;\n    padding: 0 1em;\n}\n\n.checkbox-container {\n    position:relative;\n    display: block;\n    height: 100%;\n    width: 5em;\n    cursor: pointer;\n    border: 1px solid black;\n}\n\n/* hide browser's default checkbox */\n.checkbox-container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n}\n\n/* create custom checkbox */\n.checkbox {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height:100%;\n    width: 100%;\n    background-color: #eeeeee;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0 0 0.4em 0.2em;\n}\n\n.checkbox-container:hover input ~ .checkbox {\n    background-color: #cccccc;\n}\n\n.checkbox-container input:checked ~ .checkbox {\n    background-color: #2196f3;\n}\n\n/* create checkmark (hidden when not checked) */\n.checkbox:after {\n    content: '';\n    position: absolute;\n    display: none;\n}\n\n/* show checkmark when checked*/\n.checkbox-container input:checked ~ .checkbox:after {\n    display: block;\n}\n\n/* style checkmark */\n.checkbox-container .checkbox:after {\n    /* aspect-ratio: 1/2.25; */\n    width: 1em; \n    height: 2.25em;\n    border: solid white;\n    border-width: 0 10px 10px 0;\n    transform: rotate(45deg);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1345,59 +1447,59 @@ class AddProject {
         this.checkboxContainer = document.createElement('label');
         this.checkboxInput = document.createElement('input');
         this.checkbox = document.createElement('span');
-        this.form = document.createElement('form');
+        // this.form = document.createElement('div');
         this.textInput = document.createElement('input');
+        this.submitBtn = document.createElement('button');
     }
 
+    // loading html elements in the dom
     load() {
         this.loadContainer();
         this.loadHeader();
         this.loadFieldContainer();
         this.loadCheckbox();
-        this.loadForm();
+        this.loadTextInput();
+        this.loadSubmitBtn();
         // this.loadDueDate();
     };
-
     loadContainer() {
         this.container.classList.add('add-project-container');
         this.projectContainer.appendChild(this.container);
     }
-    
     loadHeader() {
         this.header.classList.add('add-project-header');
         this.header.textContent = 'Add project';
         this.container.appendChild(this.header);
     };
-
     loadFieldContainer() {
         this.fieldContainer.classList.add('add-field-container');
         this.container.appendChild(this.fieldContainer);
     };
-
-    loadForm() {
-        this.form.classList.add('add-project-form');
-        this.loadTextInput();
-        this.fieldContainer.appendChild(this.form);
-    };
-
+    // loadForm() {
+    //     this.form.classList.add('add-project-form');
+    //     this.loadTextInput();
+    //     this.loadSubmitBtn();
+    //     this.fieldContainer.appendChild(this.form);
+    // };
     loadTextInput() {
         this.textInput.type = 'text';
-        this.textInput.id = 'add-project-text-input';
+        this.textInput.id = 'text-input';
         this.textInput.placeholder = 'Groceries...'
-        this.form.appendChild(this.textInput);
+        this.fieldContainer.appendChild(this.textInput);
     };
-
+    loadSubmitBtn() {
+        this.submitBtn.classList.add('submit-btn');
+        this.submitBtn.textContent = 'Add';
+        this.fieldContainer.appendChild(this.submitBtn);
+    };
     loadCheckbox() {
         this.loadCheckboxContainer();
         this.loadCheckboxInput();
-
     };
-
     loadCheckboxContainer() {
         this.checkboxContainer.classList.add('checkbox-container');
         this.fieldContainer.appendChild(this.checkboxContainer);
     };
-
     loadCheckboxInput() {
         this.checkboxInput.type = 'checkbox';
         this.checkbox.classList.add('checkbox');
@@ -1405,6 +1507,18 @@ class AddProject {
         this.checkboxContainer.appendChild(this.checkboxInput);
         this.checkboxContainer.appendChild(this.checkbox);
     };
+
+    // specifying logic to add project
+    add() {
+        this.submitBtn.addEventListener('click', () => {
+            const project = this.textInput.value;
+            this.emitAddedProjectEvent(project); // emit event when project is added
+        });
+    }
+    emitAddedProjectEvent(project) {
+        const event = new CustomEvent('projectAdded', { detail: project });
+        document.dispatchEvent(event);
+    }
 };
 
 /***/ }),
@@ -1465,9 +1579,71 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class ListOfToDoProjects {
+    constructor() {
+        this.projectContainer = document.querySelector('.project-container');
+        this.container = document.createElement('div');
+        this.header = document.createElement('h1');
+        this.fieldContainer = document.createElement('div');
+        this.checkboxContainer = document.createElement('label');
+        this.checkboxInput = document.createElement('input');
+        this.checkbox = document.createElement('span');
+        this.form = document.createElement('form');
+        this.textInput = document.createElement('input');
+    }
+
+    // loading html elements in the dom
     load() {
-        console.log('listOfToDoProjects loaded');
+        this.loadContainer();
+        this.loadHeader();
+        this.loadFieldContainer();
+        this.loadCheckbox();
+        this.loadForm();
+        // this.loadDueDate();
     };
+    loadContainer() {
+        this.container.classList.add('list-of-to-do-projects-container');
+        this.projectContainer.appendChild(this.container);
+    };
+    loadHeader() {
+        this.header.classList.add('list-of-to-do-projects-header');
+        this.header.textContent = 'Projects to-do';
+        this.container.appendChild(this.header);
+    };
+    loadFieldContainer() {
+        this.fieldContainer.classList.add('add-field-container');
+        this.container.appendChild(this.fieldContainer);
+    };
+    loadForm() {
+        this.form.classList.add('list-of-to-do-projects-form');
+        this.loadTextInput();
+        this.fieldContainer.appendChild(this.form);
+    };
+    loadTextInput() {
+        this.textInput.type = 'text';
+        this.textInput.id = 'list-of-to-do-projects-text-input';
+        this.textInput.placeholder = 'Essay...'
+        this.form.appendChild(this.textInput);
+    };
+    loadCheckbox() {
+        this.loadCheckboxContainer();
+        this.loadCheckboxInput();
+    };
+    loadCheckboxContainer() {
+        this.checkboxContainer.classList.add('checkbox-container');
+        this.fieldContainer.appendChild(this.checkboxContainer);
+    };
+    loadCheckboxInput() {
+        this.checkboxInput.type = 'checkbox';
+        this.checkbox.classList.add('checkbox');
+
+        this.checkboxContainer.appendChild(this.checkboxInput);
+        this.checkboxContainer.appendChild(this.checkbox);
+    };
+
+    // pushing added project to this list-of-to-do-project list
+    renderList(list) {
+        console.log(listOfToDoProjects);
+    }
 };
 
 /***/ }),
@@ -1766,9 +1942,18 @@ navbar.load();
 
 const addProject = new _view_components_add_project_add_project_js__WEBPACK_IMPORTED_MODULE_3__["default"];
 addProject.load();
+addProject.add();
+let listOfTodoProjectsList = [];
+document.addEventListener('projectAdded', (event) => {
+    const projectToAdd = event.detail;
+    listOfTodoProjectsList.push(projectToAdd)
+    console.log(listOfTodoProjectsList)
+    // listOfToDoProjects.renderList(listOfTodoProjectsList);
+});
 
 const listOfToDoProjects = new _view_components_list_of_to_do_projects_list_of_to_do_projects_js__WEBPACK_IMPORTED_MODULE_4__["default"];
 listOfToDoProjects.load();
+
 
 const addTask = new _view_components_list_of_to_do_projects_modal_list_of_tasks_add_task_add_task_js__WEBPACK_IMPORTED_MODULE_5__["default"];
 addTask.load();

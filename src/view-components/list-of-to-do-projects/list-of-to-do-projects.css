@@ -1,0 +1,102 @@
+.list-of-to-do-projects-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-of-to-do-projects-header {
+    position: relative;
+    font-size: 2.75em;
+    margin-bottom: 0.5em;
+}
+
+.list-of-to-do-projects-header:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    width: 33.3%;
+    border: 0.1em solid black;
+    border-radius: 10em;
+}
+
+.add-field-container {
+    display: flex;
+    width: 100%;
+    height: 5em;
+    justify-content: center;
+}
+
+.list-of-to-do-projects-form {
+    height: 100%;
+    width: 100%;
+}
+
+#list-of-to-do-projects-text-input {
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    font-weight: bolder;
+    padding: 0 1em;
+}
+
+.checkbox-container {
+    position:relative;
+    display: block;
+    height: 100%;
+    width: 5em;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+/* hide browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* create custom checkbox */
+.checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0.4em 0.2em;
+}
+
+.checkbox-container:hover input ~ .checkbox {
+    background-color: #cccccc;
+}
+
+.checkbox-container input:checked ~ .checkbox {
+    background-color: #2196f3;
+}
+
+/* create checkmark (hidden when not checked) */
+.checkbox:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+/* show checkmark when checked*/
+.checkbox-container input:checked ~ .checkbox:after {
+    display: block;
+}
+
+/* style checkmark */
+.checkbox-container .checkbox:after {
+    /* aspect-ratio: 1/2.25; */
+    width: 1em; 
+    height: 2.25em;
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    transform: rotate(45deg);
+}

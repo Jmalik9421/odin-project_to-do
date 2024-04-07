@@ -26,12 +26,12 @@
     justify-content: center;
 }
 
-.add-project-form {
+/* .add-project-form {
     height: 100%;
     width: 100%;
-}
+} */
 
-#add-project-text-input {
+#text-input {
     width: 100%;
     height: 100%;
     font-size: 2em;
