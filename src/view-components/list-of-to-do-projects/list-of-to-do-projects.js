@@ -5,24 +5,12 @@ export default class ListOfToDoProjects {
         this.projectContainer = document.querySelector('.project-container');
         this.container = document.createElement('div');
         this.header = document.createElement('h1');
-        // this.fieldContainer = document.createElement('div');
-        // this.checkboxContainer = document.createElement('label');
-        // this.checkboxInput = document.createElement('input');
-        // this.checkbox = document.createElement('span');
-        // this.text = document.createElement('p');
-        // this.deleteBtn = document.createElement('button');
-        // this.deleteBtnText = document.createElement('p');
     }
 
     // loading html elements in the dom
     load() {
         this.loadContainer();
         this.loadHeader();
-        // this.loadFieldContainer();
-        // this.loadCheckbox();
-        // this.loadText();
-        // this.loadDeleteBtn();
-        // this.loadDueDate();
     };
     loadContainer() {
         this.container.classList.add('list-of-to-do-projects-container');
@@ -37,16 +25,18 @@ export default class ListOfToDoProjects {
     // pushing added project to this list-of-to-do-project list
     renderList(list) {
         const fieldContainer = this.loadFieldContainer();
-        const [checkboxContainer, checkboxInput] = this.loadCheckbox(fieldContainer);
-        const text = this.loadText(list, fieldContainer);
-        const deleteBtn = this.loadDeleteBtn(fieldContainer);
+        this.loadCheckbox(fieldContainer);
+        this.loadText(list, fieldContainer);
+        this.loadDeleteBtn(fieldContainer);
         // this.loadDueDate();
         return list;
     }
     loadFieldContainer() {
         const fieldContainer = document.createElement('div');
         fieldContainer.classList.add('to-do-field-container');
+
         this.container.appendChild(fieldContainer);
+
         return fieldContainer;
     };
     loadCheckbox(fieldContainer) {
@@ -72,22 +62,25 @@ export default class ListOfToDoProjects {
         const text = document.createElement('p');
         text.id = 'list-of-to-do-projects-text';
         text.textContent = project;
+
         fieldContainer.appendChild(text);
 
         return text;
     };
     loadDeleteBtn(fieldContainer) {
+        // delete btn
         const deleteBtn = document.createElement('button');
         deleteBtn.classList.add('delete-project-btn');
 
-        const deleteBtnText = this.loadDeleteBtnText(deleteBtn);
+        // delete btn text
+        const deleteBtnText = this.loadDeleteBtnText();
 
         deleteBtn.appendChild(deleteBtnText);
         fieldContainer.appendChild(deleteBtn);
         
         return deleteBtn;
     };
-    loadDeleteBtnText(deleteBtn) {
+    loadDeleteBtnText() {
         const deleteBtnText = document.createElement('p');
         deleteBtnText.id = 'delete-btn-text';
         deleteBtnText.textContent = 'Delete'
