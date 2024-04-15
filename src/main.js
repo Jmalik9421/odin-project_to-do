@@ -18,15 +18,17 @@ navbar.load();
 const addProject = new AddProject;
 addProject.load();
 addProject.add();
-let listOfTodoProjectsList = [];
+let listOfToDoProjectsList = [];
 
 const listOfToDoProjects = new ListOfToDoProjects;
 listOfToDoProjects.load();
 
 document.addEventListener('projectAdded', (event) => {
     const projectToAdd = event.detail;
-    listOfTodoProjectsList.push(projectToAdd);
-    listOfToDoProjects.renderList(listOfTodoProjectsList);
+    listOfToDoProjectsList.push(projectToAdd);
+    if (projectToAdd !== '') {
+        listOfToDoProjects.renderProject(projectToAdd);
+    };
 });
 
 const addTask = new AddTask;

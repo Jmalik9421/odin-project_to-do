@@ -1645,24 +1645,12 @@ class ListOfToDoProjects {
         this.projectContainer = document.querySelector('.project-container');
         this.container = document.createElement('div');
         this.header = document.createElement('h1');
-        // this.fieldContainer = document.createElement('div');
-        // this.checkboxContainer = document.createElement('label');
-        // this.checkboxInput = document.createElement('input');
-        // this.checkbox = document.createElement('span');
-        // this.text = document.createElement('p');
-        // this.deleteBtn = document.createElement('button');
-        // this.deleteBtnText = document.createElement('p');
     }
 
     // loading html elements in the dom
     load() {
         this.loadContainer();
         this.loadHeader();
-        // this.loadFieldContainer();
-        // this.loadCheckbox();
-        // this.loadText();
-        // this.loadDeleteBtn();
-        // this.loadDueDate();
     };
     loadContainer() {
         this.container.classList.add('list-of-to-do-projects-container');
@@ -1675,18 +1663,18 @@ class ListOfToDoProjects {
     };
 
     // pushing added project to this list-of-to-do-project list
-    renderList(list) {
+    renderProject(project) {
         const fieldContainer = this.loadFieldContainer();
-        const [checkboxContainer, checkboxInput] = this.loadCheckbox(fieldContainer);
-        const text = this.loadText(list, fieldContainer);
-        const deleteBtn = this.loadDeleteBtn(fieldContainer);
-        // this.loadDueDate();
-        return list;
+        this.loadCheckbox(fieldContainer);
+        this.loadText(project, fieldContainer);
+        this.loadDeleteBtn(fieldContainer);
     }
     loadFieldContainer() {
         const fieldContainer = document.createElement('div');
         fieldContainer.classList.add('to-do-field-container');
+
         this.container.appendChild(fieldContainer);
+
         return fieldContainer;
     };
     loadCheckbox(fieldContainer) {
@@ -1712,22 +1700,25 @@ class ListOfToDoProjects {
         const text = document.createElement('p');
         text.id = 'list-of-to-do-projects-text';
         text.textContent = project;
+
         fieldContainer.appendChild(text);
 
         return text;
     };
     loadDeleteBtn(fieldContainer) {
+        // delete btn
         const deleteBtn = document.createElement('button');
         deleteBtn.classList.add('delete-project-btn');
 
-        const deleteBtnText = this.loadDeleteBtnText(deleteBtn);
+        // delete btn text
+        const deleteBtnText = this.loadDeleteBtnText();
 
         deleteBtn.appendChild(deleteBtnText);
         fieldContainer.appendChild(deleteBtn);
         
         return deleteBtn;
     };
-    loadDeleteBtnText(deleteBtn) {
+    loadDeleteBtnText() {
         const deleteBtnText = document.createElement('p');
         deleteBtnText.id = 'delete-btn-text';
         deleteBtnText.textContent = 'Delete'
@@ -1739,7 +1730,6 @@ class ListOfToDoProjects {
 
     // i am here
     // need to:
-    // render fieldContainer and all of its children when renderList is called 
     // need to associate index of added project in list to its html element
     // need to associate delete btn with each html element (try using data-values)
     // need to delete element at index of list when delete btn is pressed
@@ -2043,15 +2033,17 @@ navbar.load();
 const addProject = new _view_components_add_project_add_project_js__WEBPACK_IMPORTED_MODULE_3__["default"];
 addProject.load();
 addProject.add();
-let listOfTodoProjectsList = [];
+let listOfToDoProjectsList = [];
 
 const listOfToDoProjects = new _view_components_list_of_to_do_projects_list_of_to_do_projects_js__WEBPACK_IMPORTED_MODULE_4__["default"];
 listOfToDoProjects.load();
 
 document.addEventListener('projectAdded', (event) => {
     const projectToAdd = event.detail;
-    listOfTodoProjectsList.push(projectToAdd);
-    listOfToDoProjects.renderList(listOfTodoProjectsList);
+    listOfToDoProjectsList.push(projectToAdd);
+    if (projectToAdd !== '') {
+        listOfToDoProjects.renderProject(projectToAdd);
+    };
 });
 
 const addTask = new _view_components_list_of_to_do_projects_modal_list_of_tasks_add_task_add_task_js__WEBPACK_IMPORTED_MODULE_5__["default"];

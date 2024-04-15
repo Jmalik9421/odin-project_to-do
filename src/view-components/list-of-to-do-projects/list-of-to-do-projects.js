@@ -23,13 +23,11 @@ export default class ListOfToDoProjects {
     };
 
     // pushing added project to this list-of-to-do-project list
-    renderList(list) {
+    renderProject(project) {
         const fieldContainer = this.loadFieldContainer();
         this.loadCheckbox(fieldContainer);
-        this.loadText(list, fieldContainer);
+        this.loadText(project, fieldContainer);
         this.loadDeleteBtn(fieldContainer);
-        // this.loadDueDate();
-        return list;
     }
     loadFieldContainer() {
         const fieldContainer = document.createElement('div');
@@ -92,7 +90,6 @@ export default class ListOfToDoProjects {
 
     // i am here
     // need to:
-    // render fieldContainer and all of its children when renderList is called 
     // need to associate index of added project in list to its html element
     // need to associate delete btn with each html element (try using data-values)
     // need to delete element at index of list when delete btn is pressed
