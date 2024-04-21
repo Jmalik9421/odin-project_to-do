@@ -292,6 +292,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.list-of-to-do-projects-container {
     width: 100%;
     height: 5em;
     justify-content: center;
+    margin-bottom: 1em;
 }
 
 .list-of-to-do-projects-form {
@@ -402,7 +403,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.list-of-to-do-projects-container {
     border-width: 0 10px 10px 0;
     transform: rotate(45deg);
 }
-`, "",{"version":3,"sources":["webpack://./src/view-components/list-of-to-do-projects/list-of-to-do-projects.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;IACtB,WAAW;AACf;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,WAAW;IACX,WAAW;IACX,uBAAuB;AAC3B;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,cAAc;IACd,mBAAmB;IACnB,cAAc;IACd,uBAAuB;IACvB,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,yBAAyB;IACzB,yBAAyB;IACzB,kBAAkB;IAClB,cAAc;IACd,eAAe;IACf,cAAc;IACd,mBAAmB;IACnB,cAAc;IACd,kBAAkB;IAClB,mDAAmD;IACnD,UAAU;IACV,WAAW;AACf;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,0CAA0C;IAC1C,2BAA2B;AAC/B;;AAEA;IACI,gBAAgB;IAChB,wBAAwB;AAC5B;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,YAAY;IACZ,UAAU;IACV,eAAe;IACf,uBAAuB;AAC3B;;AAEA,oCAAoC;AACpC;IACI,kBAAkB;IAClB,UAAU;IACV,eAAe;IACf,SAAS;IACT,QAAQ;AACZ;;AAEA,2BAA2B;AAC3B;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,WAAW;IACX,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,wBAAwB;AAC5B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA,+CAA+C;AAC/C;IACI,WAAW;IACX,kBAAkB;IAClB,aAAa;AACjB;;AAEA,+BAA+B;AAC/B;IACI,cAAc;AAClB;;AAEA,oBAAoB;AACpB;IACI,0BAA0B;IAC1B,UAAU;IACV,cAAc;IACd,mBAAmB;IACnB,2BAA2B;IAC3B,wBAAwB;AAC5B","sourcesContent":[".list-of-to-do-projects-container {\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n}\n\n.to-do-header {\n    position: relative;\n    font-size: 2.75em;\n    margin-bottom: 0.5em;\n}\n\n.to-do-header:after {\n    position: absolute;\n    content: '';\n    top: 100%;\n    left: 0;\n    width: 33.3%;\n    border: 0.1em solid black;\n    border-radius: 10em;\n}\n\n.to-do-field-container {\n    display: flex;\n    width: 100%;\n    height: 5em;\n    justify-content: center;\n}\n\n.list-of-to-do-projects-form {\n    height: 100%;\n    width: 100%;\n}\n\n#list-of-to-do-projects-text {\n    width: 100%;\n    height: 100%;\n    font-size: 2em;\n    font-weight: bolder;\n    padding: 0 1em;\n    background-color: white;\n    border: 1px solid grey;\n}\n\n.delete-project-btn {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: #000000;\n    border: 2px solid #1A1A1A;\n    border-radius: 1em;\n    color: #FFFFFF;\n    cursor: pointer;\n    font-size: 1em;\n    font-weight: bolder;\n    padding: 0 2em;\n    text-align: center;\n    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);\n    width: 6em;\n    height: 5em;\n}\n\n.delete-project-btn:disabled {\n    pointer-events: none;\n}\n\n.delete-project-btn:hover {\n    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;\n    transform: translateY(-2px);\n}\n\n.delete-project-btn:active {\n    box-shadow: none;\n    transform: translateY(0);\n}\n\n.checkbox-container {\n    position:relative;\n    display: block;\n    height: 100%;\n    width: 5em;\n    cursor: pointer;\n    border: 1px solid black;\n}\n\n/* hide browser's default checkbox */\n.checkbox-container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n}\n\n/* create custom checkbox */\n.checkbox {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height:100%;\n    width: 100%;\n    background-color: #eeeeee;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0 0 0.4em 0.2em;\n}\n\n.checkbox-container:hover input ~ .checkbox {\n    background-color: #cccccc;\n}\n\n.checkbox-container input:checked ~ .checkbox {\n    background-color: #2196f3;\n}\n\n/* create checkmark (hidden when not checked) */\n.checkbox:after {\n    content: '';\n    position: absolute;\n    display: none;\n}\n\n/* show checkmark when checked*/\n.checkbox-container input:checked ~ .checkbox:after {\n    display: block;\n}\n\n/* style checkmark */\n.checkbox-container .checkbox:after {\n    /* aspect-ratio: 1/2.25; */\n    width: 1em; \n    height: 2.25em;\n    border: solid white;\n    border-width: 0 10px 10px 0;\n    transform: rotate(45deg);\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/view-components/list-of-to-do-projects/list-of-to-do-projects.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;IACtB,WAAW;AACf;;AAEA;IACI,kBAAkB;IAClB,iBAAiB;IACjB,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,SAAS;IACT,OAAO;IACP,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,aAAa;IACb,WAAW;IACX,WAAW;IACX,uBAAuB;IACvB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,cAAc;IACd,mBAAmB;IACnB,cAAc;IACd,uBAAuB;IACvB,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,yBAAyB;IACzB,yBAAyB;IACzB,kBAAkB;IAClB,cAAc;IACd,eAAe;IACf,cAAc;IACd,mBAAmB;IACnB,cAAc;IACd,kBAAkB;IAClB,mDAAmD;IACnD,UAAU;IACV,WAAW;AACf;;AAEA;IACI,oBAAoB;AACxB;;AAEA;IACI,0CAA0C;IAC1C,2BAA2B;AAC/B;;AAEA;IACI,gBAAgB;IAChB,wBAAwB;AAC5B;;AAEA;IACI,iBAAiB;IACjB,cAAc;IACd,YAAY;IACZ,UAAU;IACV,eAAe;IACf,uBAAuB;AAC3B;;AAEA,oCAAoC;AACpC;IACI,kBAAkB;IAClB,UAAU;IACV,eAAe;IACf,SAAS;IACT,QAAQ;AACZ;;AAEA,2BAA2B;AAC3B;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,WAAW;IACX,WAAW;IACX,yBAAyB;IACzB,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,wBAAwB;AAC5B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA,+CAA+C;AAC/C;IACI,WAAW;IACX,kBAAkB;IAClB,aAAa;AACjB;;AAEA,+BAA+B;AAC/B;IACI,cAAc;AAClB;;AAEA,oBAAoB;AACpB;IACI,0BAA0B;IAC1B,UAAU;IACV,cAAc;IACd,mBAAmB;IACnB,2BAA2B;IAC3B,wBAAwB;AAC5B","sourcesContent":[".list-of-to-do-projects-container {\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n}\n\n.to-do-header {\n    position: relative;\n    font-size: 2.75em;\n    margin-bottom: 0.5em;\n}\n\n.to-do-header:after {\n    position: absolute;\n    content: '';\n    top: 100%;\n    left: 0;\n    width: 33.3%;\n    border: 0.1em solid black;\n    border-radius: 10em;\n}\n\n.to-do-field-container {\n    display: flex;\n    width: 100%;\n    height: 5em;\n    justify-content: center;\n    margin-bottom: 1em;\n}\n\n.list-of-to-do-projects-form {\n    height: 100%;\n    width: 100%;\n}\n\n#list-of-to-do-projects-text {\n    width: 100%;\n    height: 100%;\n    font-size: 2em;\n    font-weight: bolder;\n    padding: 0 1em;\n    background-color: white;\n    border: 1px solid grey;\n}\n\n.delete-project-btn {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: #000000;\n    border: 2px solid #1A1A1A;\n    border-radius: 1em;\n    color: #FFFFFF;\n    cursor: pointer;\n    font-size: 1em;\n    font-weight: bolder;\n    padding: 0 2em;\n    text-align: center;\n    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);\n    width: 6em;\n    height: 5em;\n}\n\n.delete-project-btn:disabled {\n    pointer-events: none;\n}\n\n.delete-project-btn:hover {\n    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;\n    transform: translateY(-2px);\n}\n\n.delete-project-btn:active {\n    box-shadow: none;\n    transform: translateY(0);\n}\n\n.checkbox-container {\n    position:relative;\n    display: block;\n    height: 100%;\n    width: 5em;\n    cursor: pointer;\n    border: 1px solid black;\n}\n\n/* hide browser's default checkbox */\n.checkbox-container input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n}\n\n/* create custom checkbox */\n.checkbox {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height:100%;\n    width: 100%;\n    background-color: #eeeeee;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0 0 0.4em 0.2em;\n}\n\n.checkbox-container:hover input ~ .checkbox {\n    background-color: #cccccc;\n}\n\n.checkbox-container input:checked ~ .checkbox {\n    background-color: #2196f3;\n}\n\n/* create checkmark (hidden when not checked) */\n.checkbox:after {\n    content: '';\n    position: absolute;\n    display: none;\n}\n\n/* show checkmark when checked*/\n.checkbox-container input:checked ~ .checkbox:after {\n    display: block;\n}\n\n/* style checkmark */\n.checkbox-container .checkbox:after {\n    /* aspect-ratio: 1/2.25; */\n    width: 1em; \n    height: 2.25em;\n    border: solid white;\n    border-width: 0 10px 10px 0;\n    transform: rotate(45deg);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1726,14 +1727,17 @@ class ListOfToDoProjects {
         return deleteBtnText;
     };
 
+    // delete project
+    delete() {
+        console.log('this is working');
+        // const deleteBtnList = document.querySelectorAll('.delete-project-btn');
+        // Array.from(deleteBtnList).forEach((btn) => {
+        //     btn.addEventListener('click', () => {
+        //         console.log('this is working');
+        //     });
+        // });
 
-
-    // i am here
-    // need to:
-    // need to associate index of added project in list to its html element
-    // need to associate delete btn with each html element (try using data-values)
-    // need to delete element at index of list when delete btn is pressed
-    // 
+    };
 };
 
 /***/ }),
@@ -2034,6 +2038,7 @@ const addProject = new _view_components_add_project_add_project_js__WEBPACK_IMPO
 addProject.load();
 addProject.add();
 let listOfToDoProjectsList = [];
+let deleteBtns = [];
 
 const listOfToDoProjects = new _view_components_list_of_to_do_projects_list_of_to_do_projects_js__WEBPACK_IMPORTED_MODULE_4__["default"];
 listOfToDoProjects.load();
@@ -2043,6 +2048,11 @@ document.addEventListener('projectAdded', (event) => {
     listOfToDoProjectsList.push(projectToAdd);
     if (projectToAdd !== '') {
         listOfToDoProjects.renderProject(projectToAdd);
+        const deleteBtn = document.querySelector('.delete-project-btn');
+        deleteBtns.push(deleteBtn);
+        // i am here
+        // i need to add data-values with each of the delete btns when they are created
+        // then i will be able to call the .delete() method to delete the entire field container associated with the delete btn
     };
 });
 

@@ -86,12 +86,15 @@ export default class ListOfToDoProjects {
         return deleteBtnText;
     };
 
+    // delete project
+    delete() {
+        console.log('this is working');
+        // const deleteBtnList = document.querySelectorAll('.delete-project-btn');
+        // Array.from(deleteBtnList).forEach((btn) => {
+        //     btn.addEventListener('click', () => {
+        //         console.log('this is working');
+        //     });
+        // });
 
-
-    // i am here
-    // need to:
-    // need to associate index of added project in list to its html element
-    // need to associate delete btn with each html element (try using data-values)
-    // need to delete element at index of list when delete btn is pressed
-    // 
+    };
 };

@@ -19,6 +19,7 @@ const addProject = new AddProject;
 addProject.load();
 addProject.add();
 let listOfToDoProjectsList = [];
+let deleteBtns = [];
 
 const listOfToDoProjects = new ListOfToDoProjects;
 listOfToDoProjects.load();
@@ -28,6 +29,11 @@ document.addEventListener('projectAdded', (event) => {
     listOfToDoProjectsList.push(projectToAdd);
     if (projectToAdd !== '') {
         listOfToDoProjects.renderProject(projectToAdd);
+        const deleteBtn = document.querySelector('.delete-project-btn');
+        deleteBtns.push(deleteBtn);
+        // i am here
+        // i need to add data-values with each of the delete btns when they are created
+        // then i will be able to call the .delete() method to delete the entire field container associated with the delete btn
     };
 });
 
